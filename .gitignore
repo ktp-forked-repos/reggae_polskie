@@ -1,0 +1,18 @@
+###TEMPORARY FILES###
+Thumbs.db
+*~
+*.tmp
+~$*.doc*
+~$*.xls*
+*.xlk
+~$*.ppt*
+*.~vsdx
+
+###OTHER###
+*.sublime-*
+app/res/bootstrap/*
+app/res/font-awesome/*
+app/res/colorbox/*
+app/res/images/*
+cms.sublime-project
+cms.sublime-workspace
