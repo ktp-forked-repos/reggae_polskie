@@ -32,15 +32,17 @@
                <option value="genre_reggae_video">Reggae</option>
                <option value="genre_reggaeton_video">Reggaeton</option>
                <option value="genre_rockers_video">Rockers reggae</option>
+               <option value="genre_rocksteady_video">Rocksteady</option>               
+               <option value="genre_roots_video">Roots reggae</option>
                <option value="genre_samba_video">Samba reggae</option>
                <option value="genre_ska_video">Ska</option>
             </select>
          </div>
-         <div class="form-group">
+         <div class="form-group col-xs-12">
             <input type="text" name="content" id="content" class="form-control" placeholder="Link https://www.youtube.com..." value="<?php echo $this->getData('content');?>">
          </div>
-         <div class="form-group btn-group col-xs-12">
-            <button type="submit" style="padding-bottom: 10px" id="submit" name="submit" value="submit" class="btn btn-danger col-sm-3 col-xs-2"><i class="fa fa-check fa" aria-hidden="true"></i> <span>Zatwierdź</span> </button>
+         <div class="form-group col-xs-12 text-center">
+            <button type="submit" id="submit" name="submit" value="submit" class="btn btn-success"><i class="fa fa-check fa" aria-hidden="true"></i> <span>Zatwierdź</span> </button>
          </div>
       </form> 
    </div>

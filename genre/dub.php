@@ -1,10 +1,5 @@
 <?php 
    include('../app/init.php');
-   include('../app/settings/models/m_settings.php');
-   $settings = new Settings();
-   $type = 1;
-   $sold = 0;
-   $page_name = 'detached-house.php';
 ?>
 <!DOCTYPE html>
 <html>

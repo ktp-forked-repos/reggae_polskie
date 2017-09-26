@@ -12,7 +12,7 @@
    <link rel="stylesheet" type="text/css" href="<?php echo APP_RES?>lightbox/css/lightbox.css">
    <script src="<?php echo APP_RES?>js/jquery-3.2.1.min.js"></script>
    <?php $CMS->head(); ?>
-   <title>Dancehall music - Reggae Polskie</title>
+   <title>Reggae music - Reggae Polskie</title>
 </head>
 <body>
 
@@ -31,16 +31,19 @@
    <!--      Title      -->
    <section id="title" class="container">
       <div class="row">
-         <div class="col-xs-12 text-center text-red"> <h2 class="title_font"><?php $CMS->Cms_class->display_block('genre_dancehall_header', 'oneline')?></h2></div>        
+         <div class="col-xs-12 text-center text-red"> <h2 class="title_font"><?php $CMS->Cms_class->display_block('genre_reggae_header', 'oneline')?></h2></div>        
       </div>
    </section>
 
    <!--      Content      -->
    <section id="content" class="container">
       <div class="col-sm-10 col-xs-12 marg-top-1">
-         <p><?php $CMS->Cms_class->display_block('genre_dancehall_content')?></p>   
+         <p><?php $CMS->Cms_class->display_block('genre_reggae_content')?></p>   
       </div>
       <div class="advertisement col-sm-2 col-xs-12">
+         <?php include('../controllers/advertisement.php'); ?>
+         <?php include('../controllers/advertisement.php'); ?>
+         <?php include('../controllers/advertisement.php'); ?>
          <?php include('../controllers/advertisement.php'); ?>
          <?php include('../controllers/advertisement.php'); ?>
       </div>
@@ -52,7 +55,7 @@
       </div>
       <div class="col-sm-10 col-xs-12 marg-top-1">
          <div class="embed-responsive embed-responsive-16by9">
-            <?php $video = $CMS->Cms_class->display_video('genre_dancehall_video'); ?>
+            <?php $video = $CMS->Cms_class->display_video('genre_reggae_video'); ?>
             <iframe class="embed-responsive-item video" src="<?php echo $video; ?>" frameborder="0" allowfullscreen></iframe>
          </div>
       </div>

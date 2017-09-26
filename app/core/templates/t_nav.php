@@ -35,6 +35,8 @@
                         <li><a class="page-scroll indentation" href="../<?php SITE_PATH;?>genre/reggae.php">Reggae</a></li>
                         <li><a class="page-scroll indentation" href="../<?php SITE_PATH;?>genre/reggaeton.php">Reggaeton</a></li>
                         <li><a class="page-scroll indentation" href="../<?php SITE_PATH;?>genre/rockers-reggae.php">Rockers reggae</a></li>
+                        <li><a class="page-scroll indentation" href="../<?php SITE_PATH;?>genre/rocksteady.php">Rocksteady</a></li>
+                        <li><a class="page-scroll indentation" href="../<?php SITE_PATH;?>genre/roots-reggae.php">Roots reggae</a></li>
                         <li><a class="page-scroll indentation" href="../<?php SITE_PATH;?>genre/samba-reggae.php">Samba reggae</a></li>
                         <li><a class="page-scroll indentation" href="../<?php SITE_PATH;?>genre/ska.php">Ska</a></li>
                     </ul>
