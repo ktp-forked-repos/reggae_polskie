@@ -42,7 +42,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a class="page-scroll" href="<?php SITE_PATH;?>../dictionary.php">Słownik</a>
+                    <a class="page-scroll" href="<?php SITE_PATH;?>../vocabulary.php">Słownik</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="<?php SITE_PATH;?>../contact.php">Kontakt</a>

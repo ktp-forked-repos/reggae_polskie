@@ -6,9 +6,8 @@
    <div class="col-sm-4 col-xs-12 offset-50">
       <?php include('../settings/templates/t_nav.php'); ?>
    </div>
-
    <div class="col-sm-8 col-xs-12">
-      <div class="form-group"><h3>Formularz dodawania nowego newsa</h3></div>
+      <div class="form-group"><h3>Formularz dodawania hasła do słownika</h3></div>
       <form  action="#"  method="post" enctype="multipart/form-data" class="form-wrapper form-horizontal">
          <div class="form-group">
             <div class="text-left">
@@ -24,18 +23,14 @@
             <input type="text" name="user_id" id="user_id" class="form-control hidden" value="<?php echo $this->userId(); ?>">
          </div>
          <div class="form-group">
-            <span class="label label-primary">Wybierz obraz, który będzie miniaturą:</span>
-            <input type="file" accept="image/*" class="btn btn-primary col-xs-12" name="file" id="file" value="<?php echo $this->getData('file');?>"/>
+            <input type="text" name="title" id="title" class="form-control" placeholder="Hasło słownikowe" value="<?php echo $this->getData('title');?>">
          </div>
          <div class="form-group">
-            <input type="text" name="title" id="title" class="form-control" placeholder="Podaj tytuł"value="<?php echo $this->getData('title');?>">
+            <textarea name="content" id="content" class="form-control" placeholder="Opis hasła" ><?php echo $this->getData('content');?></textarea>
          </div>
-         <div class="form-group">
-            <textarea name="content" id="content" class="form-control" placeholder="Podaj treść newsa" ><?php echo $this->getData('content');?></textarea>
-         </div>
-         <div class="form-group centered  text-center">
-            <button type="submit" id="submit" name="submit" value="submit" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i> Zatwierdź</button>
-            <button type="reset" id="reset" name="reset" value="reset" class="btn btn-danger"><i class="fa fa-eraser" aria-hidden="true"></i> Wyczyść</button>
+         <div class="form-group text-center">
+            <button type="submit" id="submit" name="submit" value="submit" class="btn btn-success"><i class="fa fa-check fa" aria-hidden="true"></i> <span>Dodaj</span></button>
+            <button type="reset" id="reset" name="reset" value="reset" class="btn btn-danger"><i class="fa fa-eraser" aria-hidden="true"></i> <span>Wyczyść</span></button>
          </div>
       </form> 
    </div>

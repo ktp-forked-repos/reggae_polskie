@@ -48,7 +48,7 @@ foreach($stmt as $row)
    echo ' 
       <div class="row">
          <div class="col-sm-3 col-xs-12">
-            <a href="#news'.  $row['news_id'] .'" data-toggle="modal">
+            <a href="#news'. $row['news_id'] .'" data-toggle="modal" data-target="#news'. $row['news_id'] .'">
                <img class="news-img alt="news" src="data:image/jpeg;base64,'. base64_encode($row['image'] ) .'" >
             </a>';
 
@@ -57,7 +57,7 @@ foreach($stmt as $row)
          <div class="image_deleted switch_off">
             <form action="controllers/delete_news.php" class="form-inline" method="POST">
                <div class="col-xs-12 button_margin offset-row">
-                  <input type="text" class="form-control hidden" value="' . $row['news_id'] .'" id="news_id" name="news_id">
+                  <input type="text" class="form-control hidden" value="' . $row['news_id'] .'" id="news_id" name="news_id" aria-expanded="false">
                   <button type="submit" name="submit" id="submit" class="btn btn-danger col-xs-12 centered text-center" data-toggle="tooltip" title="Pozwala usunąć wpis z bazy danych"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button>
                </div>
             </form>
@@ -82,13 +82,13 @@ foreach($stmt as $row)
 
       echo '
          <form action="controllers/add_image.php" class="form-inline switch_off" method="post" enctype="multipart/form-data">
-            <div class="col-sm-6 col-sm-offset-2 col-xs-12 button_margin offset-row ">
+            <div class="col-sm-8 col-sm-offset-2 col-xs-12 offset-row ">
                <input type="text" class="form-control hidden" value="' . $row['news_id'] .'" id="news_id" name="news_id">
                <span class="label label-primary">Wybierz obraz:</span>
                <input type="file" accept="image/*" class="btn btn-primary col-xs-12" name="file" id="file" value="file" >
             </div>
-            <div class="col-xs-4 offset-row centered text-center">
-               <button type="submit" name="submit" id="submit" class="btn btn-success centered text-center" data-toggle="tooltip" title="Pozwala dodać zdjęcia do zawartości wpisu"><i class="fa fa-file-image-o" aria-hidden="true"></i> Dodaj plik</button>
+            <div class="col-sm-2 col-xs-12 text-center" style="margin-top:35px;">
+               <button type="submit" name="submit" id="submit" class="btn btn-success" data-toggle="tooltip" title="Pozwala dodać zdjęcia do zawartości wpisu"><i class="fa fa-file-image-o" aria-hidden="true"></i> Zapisz plik</button>
             </div>
          </form>
       ';

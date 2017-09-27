@@ -232,7 +232,7 @@ class Settings {
       }
    }
 
-//Genre video ------------------------------------------------------------------------------------------------
+// Genre video ------------------------------------------------------------------------------------------------
    function changeGenreVideo($id, $content){
       global $CMS;
       if($stmt = $CMS->Database->query("UPDATE content SET content = '$content' WHERE id = '$id'")){
@@ -249,6 +249,28 @@ class Settings {
          $row = mysqli_fetch_array($result); 
          $video = $row['content'];
          return $video;
+      }
+      else{
+         return FALSE;
+      }
+   }
+
+// Vocabulary ------------------------------------------------------------------------------------------------
+   function createEntry($user_id, $title, $content, $letter){
+      global $CMS;
+      if($stmt = $CMS->Database->query("INSERT INTO entries (user_id, title, content, letter) VALUES ('$user_id', '$title', '$content', '$letter')")){
+         return TRUE;
+      }
+      else{
+         return FALSE;
+      }
+   }
+
+
+   function selectEntry($letter){
+      global $CMS;
+      if($result = $CMS->Database->query("SELECT image_name FROM investments_image WHERE invest_id = '$invest_id'")){
+         return $result;
       }
       else{
          return FALSE;

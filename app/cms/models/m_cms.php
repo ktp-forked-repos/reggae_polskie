@@ -35,7 +35,7 @@ class Cms_class {
 
       if($this->CMS->Auth->checkLoginStatus()){
          if($type == 'oneline'){
-            $name = "tytuł";
+            $name = '<span style="font-size:12px; margin:0">tytuł</span>';
          }
          else if($type == 'wysiwyg'){
             $name = "edytor";

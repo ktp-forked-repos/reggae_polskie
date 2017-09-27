@@ -7,19 +7,22 @@
             <a href="<?php SITE_PATH ?>../settings/password.php">Zmiana hasło</a>
         </li>
         <li>
-            <a href="<?php SITE_PATH ?>../settings/linksimage.php">Edycja linków</a>
+            <hr/>
         </li>
         <li>
-            <a href="<?php SITE_PATH ?>../settings/carouselimage.php">Edycja karuzeli</a>
+            <a href="<?php SITE_PATH ?>../settings/genre_video.php">Gatunki -> nowy film</a>
         </li>
         <li>
-            <a href="<?php SITE_PATH ?>../settings/add_news.php">Nowy news</a>
+            <a href="<?php SITE_PATH ?>../settings/linksimage.php">Home -> edycja linków</a>
         </li>
         <li>
-            <a href="<?php SITE_PATH ?>../settings/genre_video.php">Nowy film gatunku</a>
+            <a href="<?php SITE_PATH ?>../settings/carouselimage.php">Home -> edycja karuzeli</a>
         </li>
         <li>
-            <a href="<?php SITE_PATH ?>../settings/investments.php">Dodaj inwestycję</a>
+            <a href="<?php SITE_PATH ?>../settings/add_news.php">Newsy -> nowy wpis</a>
+        </li>
+        <li>
+            <a href="<?php SITE_PATH ?>../settings/add_vocabulary.php">Słownik -> nowy wpis</a>
         </li>
     </ul>
 </nav>

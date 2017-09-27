@@ -14,5 +14,5 @@ app/res/bootstrap/*
 app/res/font-awesome/*
 app/res/colorbox/*
 app/res/images/*
-cms.sublime-project
-cms.sublime-workspace
+*.sublime-project
+*.sublime-workspace
