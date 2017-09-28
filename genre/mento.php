@@ -41,14 +41,14 @@
          <p><?php $CMS->Cms_class->display_block('genre_mento_content')?></p>   
       </div>
       <div class="advertisement col-sm-2 col-xs-12">
-         <?php include('../controllers/advertisement.php'); ?>
-         <?php include('../controllers/advertisement.php'); ?>
+         <?php include('../views/advertisement.php'); ?>
+         <?php include('../views/advertisement.php'); ?>
       </div>
    </section>
 
    <section id="video" class="container">
       <div class="advertisement col-sm-10 col-xs-12">
-         <?php include('../controllers/advertisement.php'); ?>
+         <?php include('../views/advertisement.php'); ?>
       </div>
       <div class="col-sm-10 col-xs-12 marg-top-1">
          <div class="embed-responsive embed-responsive-16by9">
@@ -61,10 +61,10 @@
    <!--      Advertisement       -->
    <section id="advertisement" class="container">
       <div class="advertisement col-sm-10 col-sm-offset-1 col-xs-12">
-         <?php include('../controllers/advertisement.php'); ?>
+         <?php include('../views/advertisement.php'); ?>
       </div>
       <div class="no-ads-info">
-         <?php include('../controllers/addblock_detector.php'); ?>
+         <?php include('../views/addblock_detector.php'); ?>
       </div>
    </section>
 

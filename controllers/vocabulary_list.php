@@ -14,23 +14,42 @@ echo '<ul class="nav nav-tabs">';
     }
   }
 echo '</ul>';
-echo '<div class="tab-content">';
+echo '<div class="tab-content container">';
   for($i = 0; $i < $result; $i++){
+    $stmt = $settings->selectEntry($char[$i]);
+    $row = mysqli_fetch_array($stmt);
+
     if($i == 0 || $char[$i] == 'a'){
-      echo '
-        <div id="' . $char[$i] . '" class="tab-pane fade in active">
-          <h3>' . $char[$i] . '</h3>
-          <p style="margin-left:50px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-      ';
+      echo '<div id="' . $char[$i] . '" class="tab-pane fade in active">';
+          if(mysqli_num_rows($stmt) == 0){
+            echo '<h4 class="row entry-empty col-xs-12">brak wyników</h4>';
+          };
+          foreach($stmt as $row)  
+          {
+            echo '<h4 class="row entry-title col-xs-12">' . $row['title'] . ' </h4>
+            <h3 class="row entry-content col-xs-12 col-sm-11 col-sm-offset-1">' . $row['content'] . ' </h3>';
+            if(isset($_SESSION['loggedin'])){
+              include("views/vocabulary_update_form.php");
+            };
+            echo '<hr class="row col-xs-12"/>';
+          };
+      echo '</div>';
     }
     else{
-      echo '
-        <div id="' . $char[$i] . '" class="tab-pane fade">
-          <h3>' . $char[$i] . '</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-      ';
+      echo '<div id="' . $char[$i] . '" class="tab-pane fade">';
+          if(mysqli_num_rows($stmt) == 0){
+            echo '<div class="row text-center entry-empty col-xs-12"><i class="fa fa-meh-o" aria-hidden="true"></i> brak haseł</div>';
+          };
+          foreach($stmt as $row)  
+          {
+            echo '<h4 class="row entry-title col-xs-12">' . $row['title'] . ' </h4>
+            <h3 class="row entry-content col-xs-12 col-sm-11 col-sm-offset-1">' . $row['content'] . ' </h3>';
+            if(isset($_SESSION['loggedin'])){
+              include("views/vocabulary_update_form.php");
+            };
+            echo '<hr class="row col-xs-12"/>';
+          };
+      echo '</div>';
     }
   }
 echo '</div>';

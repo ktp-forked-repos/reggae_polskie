@@ -21,11 +21,11 @@
       $('#edit_t').click(function(e) {
          e.preventDefault();
 
-         if($(this).html() == '<i class="fa fa-eye" aria-hidden="true"></i> Wyłącz podgląd'){
-            $(this).html('<i class="fa fa-low-vision" aria-hidden="true"></i> Włącz edycję');
+         if($(this).html() == '<i class="fa fa-toggle-off" aria-hidden="true"></i> Włącz edycję'){
+            $(this).html('<i class="fa fa-toggle-on" aria-hidden="true"></i> Wyłącz edycję');
          }
          else{
-            $(this).html('<i class="fa fa-eye" aria-hidden="true"></i> Wyłącz podgląd');
+            $(this).html('<i class="fa fa-toggle-off" aria-hidden="true"></i> Włącz edycję');
          }
       $('.cms_edit_link').toggle();
       $('.cms_edit_type').toggle();

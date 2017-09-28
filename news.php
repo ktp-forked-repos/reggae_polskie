@@ -38,10 +38,10 @@
 			<?php include('controllers/news_list.php'); ?>
 		</div>
 		<div class="advertisement col-sm-2 col-xs-12">
-			<?php include('controllers/advertisement.php'); ?>
+			<?php include('views/advertisement.php'); ?>
 		</div>
       <div class="no-ads-info">
-         <?php include('controllers/addblock_detector.php'); ?>
+         <?php include('views/addblock_detector.php'); ?>
       </div>
 	</section>
 

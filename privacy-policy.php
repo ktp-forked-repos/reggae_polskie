@@ -46,6 +46,16 @@
 		?>
 	</div>
 
+   <!--    Advertisement       -->
+   <section id="advertisement" class="container">
+      <div class="advertisement col-xs-12">
+         <?php include('views/advertisement.php'); ?>
+      </div>
+      <div class="no-ads-info">
+         <?php include('views/addblock_detector.php'); ?>
+      </div>
+   </section>
+
 	<!-- footer -->
 	<footer class="container-fluid text-center offset-top">
 		<?php include('app/core/templates/t_footer.php'); ?>
@@ -56,13 +66,14 @@
 	<script src="<?php echo APP_RES?>/bootstrap/js/bootstrap.min.js"></script>
 	<script src="<?php echo APP_RES?>/js/main-style.js"></script>
 	<script src="<?php echo APP_RES?>/js/scroll-to-top.min.js"></script>
+   <script src="<?php echo APP_RES?>js/addblock_detector.js"></script>
 
 <!-- scroll-to-top -->
 	<a href="" id="scroll-to-top" >
-        <span class="scroll-top fa-stack fa-2x fixed-up">
-            <i class="fa fa-circle fa-stack-2x fa-check"></i>
-            <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
-        </span>
+	   <span class="scroll-top fa-stack fa-2x fixed-up">
+	      <i class="fa fa-circle fa-stack-2x fa-check"></i>
+	      <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+	   </span>
 	</a>
 </body>
 </html>

@@ -266,15 +266,41 @@ class Settings {
       }
    }
 
-
    function selectEntry($letter){
       global $CMS;
-      if($result = $CMS->Database->query("SELECT image_name FROM investments_image WHERE invest_id = '$invest_id'")){
-         return $result;
+      if($stmt = $CMS->Database->query("SELECT * FROM entries WHERE letter = '$letter' ORDER BY title")){
+         return $stmt;
       }
       else{
          return FALSE;
       }
    }
-}
 
+   function countEntry(){
+      global $CMS;
+      $result = $CMS->Database->query("SELECT COUNT(entry_id) FROM entries");
+      $count = mysqli_fetch_array($result); 
+      return $count[0];
+   }
+
+   function deleteEntry($entry_id){
+      global $CMS;
+      if($stmt = $CMS->Database->query("DELETE FROM entries WHERE entry_id = '$entry_id'")){
+         return TRUE;
+      }
+      else{
+         return FALSE;
+      }
+   }
+
+   function updateEntry($entry_id, $title, $content, $letter){
+      global $CMS;
+      if($stmt = $CMS->Database->query("UPDATE entries SET title = '$title', content = '$content', letter = '$letter' WHERE entry_id = '$entry_id'")){
+         return TRUE;
+      }
+      else{
+         return FALSE;
+      }
+   }
+
+}

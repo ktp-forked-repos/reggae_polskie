@@ -1,4 +1,9 @@
-<?php include("app/init.php") ?>
+<?php 
+  include("app/init.php");
+  include('app/settings/models/m_settings.php');
+  $settings = new Settings();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +15,7 @@
   <link rel="stylesheet" type="text/css" href="<?php echo APP_RES?>lightbox/css/lightbox.css">
   <script src="<?php echo APP_RES?>js/jquery-3.2.1.min.js"></script>
   <?php $CMS->head(); ?>
-  <title>Słownik</title>
+  <title>Słownik terminów reggae/rasta</title>
 </head>
 <body>
     <?php $CMS->toolbar(); ?>
@@ -25,18 +30,20 @@
   </section>
 
   <!-- Content -->
-  <section id="vocabulary" class="container marg-top-2"">
-    <h2>Słownik</h2>
+  <section id="vocabulary" class="container marg-top-2">
+    <?php include('controllers/alerts.php'); ?>
+    <h2>Słownik terminów reggae/rasta</h2>
     <?php include('controllers/vocabulary_list.php'); ?>
+    <div class="text-red"><strong>lość haseł w słowniku: <?php echo $settings->countEntry(); ?></strong></div>
   </section>
 
    <!--    Advertisement       -->
    <section id="advertisement" class="container">
       <div class="advertisement col-xs-12">
-         <?php include('controllers/advertisement.php'); ?>
+         <?php include('views/advertisement.php'); ?>
       </div>
       <div class="no-ads-info">
-         <?php include('controllers/addblock_detector.php'); ?>
+         <?php include('views/addblock_detector.php'); ?>
       </div>
    </section>
 
@@ -58,13 +65,14 @@
   <script src="<?php echo APP_RES?>/bootstrap/js/bootstrap.min.js"></script>
   <script src="<?php echo APP_RES?>/js/main-style.js"></script>
   <script src="<?php echo APP_RES?>/js/scroll-to-top.min.js"></script>
+   <script src="<?php echo APP_RES?>js/addblock_detector.js"></script>
 
 <!-- scroll-to-top -->
   <a href="" id="scroll-to-top" >
-        <span class="scroll-top fa-stack fa-2x fixed-up">
-            <i class="fa fa-circle fa-stack-2x fa-check"></i>
-            <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
-        </span>
+    <span class="scroll-top fa-stack fa-2x fixed-up">
+      <i class="fa fa-circle fa-stack-2x fa-check"></i>
+      <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+    </span>
   </a>
 </body>
 </html>

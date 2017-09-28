@@ -28,59 +28,7 @@
 
    <!--      Carousele       -->
    <section class="row">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-         <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-         </ol>
-         <div class="carousel-inner">
-           <div class="item active">
-               <?php  
-                  $id_image = 1;
-                  $settings->selectCarouselImage($id_image);
-                  $result = $settings->selectCarouselContent($id_image);
-                  $row = mysqli_fetch_assoc($result);
-               ?>  
-               <div class="carousel-caption">
-                  <h3><?php echo $row['title'] ?></h3>
-                  <p><?php echo $row['description'] ?></p>
-               </div>
-            </div>
-            <div class="item">
-               <?php  
-                  $id_image = 2;
-                  $settings->selectCarouselImage($id_image);
-                  $result = $settings->selectCarouselContent($id_image);
-                  $row = mysqli_fetch_assoc($result);    
-               ?>
-               <div class="carousel-caption">
-                  <h3><?php echo $row['title'] ?></h3>
-                  <p><?php echo $row['description'] ?></p>
-               </div> 
-            </div>
-            <div class="item">
-               <?php  
-                  $id_image = 3;
-                  $settings->selectCarouselImage($id_image);
-                  $result = $settings->selectCarouselContent($id_image);
-                  $row = mysqli_fetch_assoc($result);        
-               ?>
-               <div class="carousel-caption">
-                  <h3><?php echo $row['title'] ?></h3>
-                  <p><?php echo $row['description'] ?></p>
-               </div> 
-            </div>
-         </div>
-         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-         </a>
-         <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-         </a>
-      </div>
+      <?php include('controllers/index_carousel.php'); ?>
    </section>
 
    <!-- Image bg -->
@@ -88,76 +36,29 @@
       <img src="<?php echo APP_RES?>/images/main/reggae_bg.jpeg" class="bg_image_index" alt="">
    </section>
 
-   <!--      Links       -->
-   <section id="links" class="row col-xs-12 text-center links-marg">
-      <div >
-         <div class="col-md-4">
-            <div class="thumbnail box-shadow">
-               <?php  
-                  $id_image = 4;
-                  $result = $settings->selectCarouselContent($id_image);
-                  $row = mysqli_fetch_assoc($result);    
-               ?> 
-               <a href="<?php echo $row['description'] ?>">
-                  <?php  
-                     $settings->selectCarouselImage($id_image);     
-                  ?> 
-                  <div class="caption">
-                     <p class="title"><?php echo $row['title'] ?></p>
-                  </div>
-               </a>
-            </div>
-         </div>
-         <div class="col-md-4">
-            <div class="thumbnail box-shadow">
-               <?php  
-                  $id_image = 5;
-                  $result = $settings->selectCarouselContent($id_image);
-                  $row = mysqli_fetch_assoc($result);    
-               ?> 
-               <a href="<?php echo $row['description'] ?>">
-                  <?php  
-                     $settings->selectCarouselImage($id_image);     
-                  ?> 
-                  <div class="caption">
-                     <p class="title"><?php echo $row['title'] ?></p>
-                  </div>
-               </a>
-            </div>
-         </div>
-         <div class="col-md-4">
-            <div class="thumbnail box-shadow">
-               <?php  
-                  $id_image = 6;
-                  $result = $settings->selectCarouselContent($id_image);
-                  $row = mysqli_fetch_assoc($result);    
-               ?> 
-               <a href="<?php echo $row['description'] ?>">
-                  <?php  
-                     $settings->selectCarouselImage($id_image);     
-                  ?> 
-                  <div class="caption">
-                     <p class="title"><?php echo $row['title'] ?></p>
-                  </div>
-               </a>
-            </div>
-         </div>
-      </div>
-   </section>
-
    <!--      News       -->
    <section id="news" class="container">
       <div class="col-sm-8 marg-top-1">	
-         <?php include('controllers/news_index.php'); ?>
+         <?php include('controllers/index_news.php'); ?>
       </div>
       <div class="advertisement col-sm-4">
-         <?php include('controllers/advertisement.php'); ?>
+         <?php include('views/advertisement.php'); ?>
       </div>
       <div class="no-ads-info">
-         <?php include('controllers/addblock_detector.php'); ?>
+         <?php include('views/addblock_detector.php'); ?>
       </div>
    </section>
-      
+     
+   <!--      Links       -->
+   <section id="links" class="row col-xs-12 text-center links-marg">
+      <div>
+         <?php include('controllers/index_links.php'); ?>
+      </div>
+      <div class="advertisement col-xs-12">
+         <?php include('views/advertisement.php'); ?>
+      </div>
+   </section>
+
    <!--      Fb comments       -->
    <section id="fb-comments" class="container">
       <div class="col-md-10 col-md-offset-1 col-sm-12 marg-top-3">

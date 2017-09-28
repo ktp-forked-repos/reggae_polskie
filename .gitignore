@@ -16,3 +16,4 @@ app/res/colorbox/*
 app/res/images/*
 *.sublime-project
 *.sublime-workspace
+*init.php

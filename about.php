@@ -32,10 +32,13 @@
 		</div>
 
 		<div class="col-sm-4">
-			<?php include('controllers/advertisement.php'); ?>
+			<?php include('views/advertisement.php'); ?>
 			<br><br><br>
-			<?php include('controllers/advertisement.php'); ?>
+			<?php include('views/advertisement.php'); ?>
 		</div>
+      <div class="no-ads-info">
+         <?php include('views/addblock_detector.php'); ?>
+      </div>
 	</div>
 
 	<!-- footer -->
