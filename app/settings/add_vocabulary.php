@@ -38,7 +38,7 @@ if(isset($_POST['submit'])){
       $CMS->Template->load(APP_PATH . 'settings/views/v_add_vocabulary.php');
    }
    else if($size_content  > 10000){
-      $CMS->Template->setAlert('<i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i> Zbyt długa treść - maksymalnie 10000 znaków','danger');
+      $CMS->Template->setAlert('<i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i> Zbyt długi opis - maksymalnie 10000 znaków','danger');
       $CMS->Template->load(APP_PATH . 'settings/views/v_add_vocabulary.php');
    }
    else{
@@ -46,7 +46,7 @@ if(isset($_POST['submit'])){
 
       if($changed == TRUE){
 
-         $CMS->Template->setAlert('<i class="fa fa-check-square-o" aria-hidden="true"></i> News został dodany','success');
+         $CMS->Template->setAlert('<i class="fa fa-check-square-o" aria-hidden="true"></i> Hasło zostało prawidłowo zapisane w bazie','success');
          $CMS->Template->setData('title', '');
          $CMS->Template->setData('content', '');
          $CMS->Template->load(APP_PATH . 'settings/views/v_add_vocabulary.php');

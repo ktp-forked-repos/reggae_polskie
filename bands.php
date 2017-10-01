@@ -14,7 +14,7 @@
   <link rel="stylesheet" type="text/css" href="<?php echo APP_RES?>lightbox/css/lightbox.css">
   <script src="<?php echo APP_RES?>js/jquery-3.2.1.min.js"></script>
   <?php $CMS->head(); ?>
-  <title>Słownik terminów reggae/rasta</title>
+  <title>Polskie zespoły i wykonawcy muzyki reggae / Polish reggae bands</title>
 </head>
 <body>
     <?php $CMS->toolbar(); ?>
@@ -29,12 +29,24 @@
   </section>
 
   <!-- Content -->
-  <section id="vocabulary" class="container marg-top-0">
-    <?php include('controllers/alerts.php'); ?>
-    <h2 class="pad-bottom-1 text-center">Słownik terminów reggae/rasta</h2>
-    <?php include('controllers/vocabulary_list.php'); ?>
-    <div class="text-red"><strong>lość haseł w słowniku: <?php echo $settings->countEntry(); ?></strong></div>
-  </section>
+  <?php 
+  if(!isset($_GET['name'])) {?>
+    <section id="bands_list" class="container marg-top-0">
+      <?php include('controllers/alerts.php'); ?>
+      <h2 class="pad-bottom-1 text-center">Polskie zespoły i wykonawcy muzyki reggae</h2>
+      <?php include('controllers/bands_list.php'); ?>
+      <div class="text-red marg-top-1"><strong>lość zespołów w bazie: <?php echo $settings->countEntry(); ?></strong></div>
+    </section>
+  <?php 
+  } 
+  else { ?>
+    <section id="bands_list" class="container marg-top-0">
+      <h2 class="pad-bottom-1 text-center">Widok rekordu</h2>
+      <h2 class="pad-bottom-1 text-center"><?php $name = htmlentities($_GET['name'], ENT_QUOTES); echo $name?></h2>
+
+    </section>
+  <?php } ?>
+  
 
    <!--    Advertisement       -->
    <section id="advertisement" class="container">

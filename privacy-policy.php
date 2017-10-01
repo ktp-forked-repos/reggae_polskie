@@ -57,7 +57,7 @@
    </section>
 
 	<!-- footer -->
-	<footer class="container-fluid text-center offset-top">
+	<footer class="container-fluid text-center marg-top-4">
 		<?php include('app/core/templates/t_footer.php'); ?>
 	</footer>
 

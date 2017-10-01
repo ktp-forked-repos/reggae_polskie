@@ -118,6 +118,16 @@ class Settings {
       }
    }
 
+   function updateNews($news_id, $title, $content){
+      global $CMS;
+      if($stmt = $CMS->Database->query("UPDATE news SET title = '$title', content = '$content' WHERE news_id = '$news_id'")){
+         return TRUE;
+      }
+      else{
+         return FALSE;
+      }
+   }
+
    function addImageToNews($news_id, $file){
       global $CMS;
       if($stmt = $CMS->Database->query("INSERT INTO news_image (news_id, image_name) VALUES ('$news_id', '$file')")){

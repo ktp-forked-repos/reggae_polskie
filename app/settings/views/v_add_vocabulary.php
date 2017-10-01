@@ -23,7 +23,7 @@
             <input type="text" name="user_id" id="user_id" class="form-control hidden" value="<?php echo $this->userId(); ?>">
          </div>
          <div class="form-group">
-            <input type="text" name="title" id="title" class="form-control" placeholder="Hasło słownikowe" value="<?php echo $this->getData('title');?>">
+            <input type="text" name="title" id="title" class="form-control" placeholder="Hasło słownikowe" value="<?php echo $this->getData('title');?>" autocomplete="off">
          </div>
          <div class="form-group">
             <textarea name="content" id="content" class="form-control" placeholder="Opis hasła" ><?php echo $this->getData('content');?></textarea>

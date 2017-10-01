@@ -52,55 +52,30 @@ foreach($stmt as $row)
                <img class="news-img alt="news" src="data:image/jpeg;base64,'. base64_encode($row['image'] ) .'" >
             </a>';
 
-   if(isset($_SESSION['loggedin'])){
-      echo '
-         <div class="image_deleted switch_off">
-            <form action="controllers/news_delete.php" class="form-inline" method="POST">
-               <div class="col-xs-12 button_margin offset-row">
-                  <input type="text" class="form-control hidden" value="' . $row['news_id'] .'" id="news_id" name="news_id" aria-expanded="false">
-                  <button type="submit" name="submit" id="submit" class="btn btn-danger col-xs-12 centered text-center" data-toggle="tooltip" title="Pozwala usunąć wpis z bazy danych"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button>
-               </div>
-            </form>
-         </div>
-      ';
-   }
-      echo '    
-         </div>
+            if(isset($_SESSION['loggedin'])){
+               include("views/news_delete_form.php");
+            }
+         echo ' </div>
          <div class="col-sm-9 col-xs-12">
             <div class="row">
                <div class="col-sm-10 col-xs-9 news-title">'. $title .'</div>  
                <div class="col-sm-2 col-xs-3 news-date">'. '<small>Dodano:</small><br>' . $day . '.' . $month . '.' . $year .'</div>
             </div>
-               <div class="col-xs-12 news-contents offset-row">'. $content . '<a href="#news'.  $row['news_id'] .'" data-toggle="modal">
-                  Zobacz więcej</a>
-               </div>  
+            <div class="col-xs-12 news-contents offset-row">'. $content . '<a href="#news'.  $row['news_id'] .'" data-toggle="modal">
+               Zobacz więcej</a>
+            </div>  
          </div>  
-         <div class="col-sm-12">
-      ';
-
-      if(isset($_SESSION['loggedin'])){
-
-      echo '
-         <form action="controllers/add_image.php" class="form-inline switch_off" method="post" enctype="multipart/form-data">
-            <div class="col-sm-8 col-sm-offset-2 col-xs-12 offset-row ">
-               <input type="text" class="form-control hidden" value="' . $row['news_id'] .'" id="news_id" name="news_id">
-               <span class="label label-primary">Wybierz obraz:</span>
-               <input type="file" accept="image/*" class="btn btn-primary col-xs-12" name="file" id="file" value="file" >
-            </div>
-            <div class="col-sm-2 col-xs-12 text-center" style="margin-top:35px;">
-               <button type="submit" name="submit" id="submit" class="btn btn-success" data-toggle="tooltip" title="Pozwala dodać zdjęcia do zawartości wpisu"><i class="fa fa-file-image-o" aria-hidden="true"></i> Zapisz plik</button>
-            </div>
-         </form>
-      ';
-      }
-
-      echo '
-            </div>
-         </div>
-         <div class="row">
-            <div class="col-xs-12"><hr class="news-line"></div>
-         </div>
-      ';
+         <div class="col-sm-12">';
+            if(isset($_SESSION['loggedin'])){
+               include("views/news_add_image_form.php");
+               include("views/news_update_form.php");
+            }
+         echo '</div>
+      </div>
+      <div class="row">
+         <div class="col-xs-12"><hr class="news-line"></div>
+      </div>
+   ';
     };
 
 //pagination

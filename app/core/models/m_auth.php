@@ -15,8 +15,21 @@ class Auth{
          $stmt->store_result();
 
          if($stmt->num_rows > 0){
-            $stmt->close();
-            return TRUE;   
+            
+            $result = $CMS->Database->query("SELECT active FROM users WHERE login = '$user'");
+            $row = $result->fetch_assoc();
+            $active = $row['active'];
+            if($active == 0){
+               return 2;
+            }
+            else if($active == 1){
+               $stmt->close();
+               return TRUE;   
+            }
+            else{
+               die('Błąd komunikacji z bazą danych! Skontaktuj się z administratorem strony');
+            }
+
          }
          else{
             $stmt->close();
