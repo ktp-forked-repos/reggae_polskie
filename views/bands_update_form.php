@@ -23,6 +23,9 @@ echo'
                   <input type="text" class="form-control" value="' . $row['name'] . '" id="name" name="name" aria-expanded="false">
                </div>
                <div class="form-group offset-row">
+                  <input type="url" class="form-control" value="' . $row['video'] . '" id="video" name="video" aria-expanded="false">
+               </div>
+               <div class="form-group offset-row">
                   <textarea name="content" id="content" class="form-control">' . $row['content'] . '</textarea>
                </div>
                <div class="form-group offset-row">

@@ -16,7 +16,7 @@ echo '<ul class="nav nav-tabs">';
     }
   }
 echo '</ul>';
-echo '<div class="tab-content container">';
+echo '<div class="tab-content container marg-top-1">';
   for($i = 0; $i < $result; $i++){
     $stmt = $settings->selectBandsList($char[$i]);
     $row = mysqli_fetch_array($stmt);
@@ -24,7 +24,7 @@ echo '<div class="tab-content container">';
     if($i == 0 || $char[$i] == 'a'){
       echo '<div id="' . $char[$i] . '" class="tab-pane fade in active">';
           if(mysqli_num_rows($stmt) == 0){
-            echo '<h4 class="row entry-empty col-xs-12"><i class="fa fa-meh-o" aria-hidden="true"> brak wyników</h4>';
+            echo '<h4 class="row text-center entry-empty col-xs-12"><i class="fa fa-meh-o" aria-hidden="true"></i> brak wyników</h4>';
           };
           foreach($stmt as $row)  
           {

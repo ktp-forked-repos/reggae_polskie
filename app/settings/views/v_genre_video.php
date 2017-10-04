@@ -20,9 +20,9 @@
             </div>
          </div>
          <div class="form-group  col-xs-12">
-            <label class="control-label" for="id">Wybierz film który chcesz aktualizować:</label>
+            <label class="control-label" for="id">Gatunki muzyczne:</label>
             <select class="form-control" name="id" id="id" >
-               <option value="null" class="first" selected>Wybierz film</option>
+               <option value="null" class="first" selected>Wybierz gatunek</option>
                <option value="genre_dancehall_video">Dancehall</option>
                <option value="genre_dub_video">Dub</option>
                <option value="genre_mento_video">Mento</option>

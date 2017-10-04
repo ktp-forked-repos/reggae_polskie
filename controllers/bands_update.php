@@ -10,6 +10,7 @@ if(isset($_POST['submit'])){
    $band_name = $_POST['band_name'];
    $content = $_POST['content'];
    $band_id = $_POST['band_id'];
+   $video = $_POST['video'];
 
    $letter = strtolower(substr($name, 0, 1));
    $size_name = strlen($name);
@@ -43,7 +44,7 @@ if(isset($_POST['submit'])){
       header('Location: ' . SITE_PATH . 'bands.php?name=' . $band_name); 
    }
    else{
-      $changed = $settings->updateBand($band_id, $name, $content, $letter);
+      $changed = $settings->updateBand($band_id, $name, $video, $content, $letter);
 
       if($changed == TRUE){
          $_SESSION['alert'] = '<div class="alert alert-success alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i> Zespół został zaktualizowany</div>';
@@ -51,7 +52,7 @@ if(isset($_POST['submit'])){
 
       } 
       else {
-         header('Location: '. SITE_PATH . 'app/core/views/v_error.php');
+         $CMS->Auth->checkErrorDefault();
       }
    }
 }

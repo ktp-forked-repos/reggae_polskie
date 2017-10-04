@@ -1,4 +1,3 @@
-<?php include("../../init.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +11,7 @@
 </head>
 <body>
    <div class="container">
-      <div class="panel panel-danger centered text-center offset-top">
+      <div class="panel panel-danger centered text-center marg-top-3">
          <div class="panel-heading"><h3><i class="fa fa-shield fa-2x" aria-hidden="true"></i>  Błąd autoryzacji <i class="fa fa-shield fa-2x" aria-hidden="true"></i></h3></div>
          <div class="panel-body"><strong>Nie posiadasz dostępu do żądanego zasobu - zaloguj się lub skontaktuj z administratorem</strong></div>
       </div>

@@ -55,7 +55,7 @@ if(isset($_POST['submit'])){
 
       } 
       else {
-         header('Location: '. SITE_PATH . 'app/core/views/v_error.php');
+         $CMS->Auth->checkErrorDefault();
       }
    }
 }

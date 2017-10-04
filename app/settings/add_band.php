@@ -9,10 +9,12 @@ if(isset($_POST['submit'])){
 
    $CMS->Template->setData('user_id', $_POST['user_id']);
    $CMS->Template->setData('name', $_POST['name']);
+   $CMS->Template->setData('video', $_POST['video']);
    $CMS->Template->setData('content', $_POST['content']);
 
    $user_id = $_POST['user_id'];
    $name = $_POST['name'];
+   $video = $_POST['video'];
    $content = $_POST['content'];
 
    $letter = strtolower(substr($name, 0, 1));
@@ -48,12 +50,13 @@ if(isset($_POST['submit'])){
       $CMS->Template->load(APP_PATH . 'settings/views/v_add_band.php');
    }
    else{
-      $changed = $settings->createBand($user_id, $name, $content, $letter);
+      $changed = $settings->createBand($user_id, $name, $video, $content, $letter);
 
       if($changed == TRUE){
 
-         $CMS->Template->setAlert('<i class="fa fa-check-square-o" aria-hidden="true"></i> Artysta został dodany do bazy','success');
+         $CMS->Template->setAlert('<i class="fa fa-check-square-o" aria-hidden="true"></i> Dodano zespół do bazy','success');
          $CMS->Template->setData('name', '');
+         $CMS->Template->setData('video', '');
          $CMS->Template->setData('content', '');
          $CMS->Template->load(APP_PATH . 'settings/views/v_add_band.php');
       } 

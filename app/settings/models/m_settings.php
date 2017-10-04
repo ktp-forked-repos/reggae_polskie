@@ -53,6 +53,17 @@ class Settings {
       }
    }
 
+   function selectCarouselName($id){
+      global $CMS;
+      if($stmt = $CMS->Database->query("SELECT title  FROM carousel_image WHERE id_image = '$id'")){
+         $row = mysqli_fetch_array($stmt); 
+         return $row['title'];
+      }
+      else{
+         return FALSE;
+      }
+   }
+
    function selectCarouselImage($id_image){
       global $CMS;
       if($result = $CMS->Database->query("SELECT id_image, name FROM carousel_image WHERE id_image = '$id_image'")){
@@ -224,9 +235,9 @@ class Settings {
    }
 
 // Bands -------------------------------------------------------------------------------------------
-   function createBand($user_id, $name, $content, $letter){
+   function createBand($user_id, $name, $video, $content, $letter){
       global $CMS;
-      if($stmt = $CMS->Database->query("INSERT INTO bands (user_id, name, content, letter) VALUES ('$user_id', '$name', '$content', '$letter')")){
+      if($stmt = $CMS->Database->query("INSERT INTO bands (user_id, name, video, content, letter) VALUES ('$user_id', '$name', '$video', '$content', '$letter')")){
          return TRUE;
       }
       else{
@@ -261,9 +272,9 @@ class Settings {
       }
    }
 
-   function updateBand($band_id, $name, $content, $letter){
+   function updateBand($band_id, $name, $video, $content, $letter){
       global $CMS;
-      if($stmt = $CMS->Database->query("UPDATE bands SET name = '$name', content = '$content', letter = '$letter'  WHERE band_id = '$band_id'")){
+      if($stmt = $CMS->Database->query("UPDATE bands SET name = '$name', video = '$video', content = '$content', letter = '$letter'  WHERE band_id = '$band_id'")){
          return TRUE;
       }
       else{

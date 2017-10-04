@@ -1,7 +1,7 @@
 <?php
    $this->load(APP_PATH . 'core/templates/t_page_head.php');
+   $settings = new Settings();
 ?>
-
 <div class="container">
    <div class="col-sm-4 col-xs-12 offset-50">
       <?php include('../settings/templates/t_nav.php'); ?>
@@ -23,29 +23,28 @@
             <label class="control-label" for="id_image">Wybierz obraz który chcesz aktualizować (od lewej):</label>
             <select class="form-control" name="id_image" id="id_image">
                <option value="0" class="first" selected>Wybierz obraz z listy</option>
-               <option value="4">Link 1</option>
-               <option value="5">Link 2</option>
-               <option value="6">Link 3</option>
-               <option value="7">Link 4</option>
-               <option value="8">Link 5</option>
-               <option value="9">Link 6</option>
+               <?php
+                  for($i = 4; $i <= 9; $i++){
+                     $n = $i - 3;
+                     $id = $settings->selectCarouselName($i);
+                     echo '<option value="' . $i . '">' . $n . '. ' . $id . '</option>';
+                  }
+               ?>
             </select>
          </div>
          <div class="form-group">
-            <input type="text" name="title" id="title" class="form-control" placeholder="Nazwa firmy" value="<?php echo $this->getData('title');?>">
+            <input type="text" name="title" id="title" class="form-control" placeholder="Tytuł odnośnika" value="<?php echo $this->getData('title');?>">
          </div>
          <div class="form-group">
             <input type="text" name="description" id="description" class="form-control" placeholder="Odnośnik http://..." value="<?php echo $this->getData('description');?>">
          </div>
          <div class="form-group btn-group col-xs-12">
             <input type="file" accept="image/*" class="btn btn-primary col-xs-10 col-sm-9" name="file" id="file" value="<?php echo $this->getData('file');?>">
-
             <button type="submit" style="padding-bottom: 10px" id="submit" name="submit" value="submit" class="btn btn-danger col-sm-3 col-xs-2"><i class="fa fa-check fa" aria-hidden="true"></i> <span>Zatwierdź</span> </button>
          </div>
       </form> 
    </div>
 </div>
-
 <?php
    $this->load(APP_PATH . 'core/templates/t_page_foot.php');
 ?>

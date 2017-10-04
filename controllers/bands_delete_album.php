@@ -15,8 +15,7 @@ if(isset($_POST['submit'])){
       header('Location: ' . SITE_PATH . 'bands.php?name=' . $band_name); 
    } 
    else {
-      header('Location: '. SITE_PATH . 'app/core/views/v_error.php');
-
+      $CMS->Auth->checkErrorDefault();
    }
 }
 else{

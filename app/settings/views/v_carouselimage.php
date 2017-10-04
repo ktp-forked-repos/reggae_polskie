@@ -1,5 +1,6 @@
 <?php
    $this->load(APP_PATH . 'core/templates/t_page_head.php');
+   $settings = new Settings();
 ?>
 
 <div class="container">
@@ -22,10 +23,13 @@
          <div class="form-group  col-xs-12">
             <label class="control-label" for="id_image">Wybierz obraz który chcesz aktualizować:</label>
             <select class="form-control" name="id_image" id="id_image" >
-               <option value="0" class="first" selected>Wybierz obraz z listy</option>
-               <option value="1">Obraz 1</option>
-               <option value="2">Obraz 2</option>
-               <option value="3">Obraz 3</option>
+               <option value="0" class="first" selected>Lista obrazów</option>
+               <?php
+                  for($i = 1; $i <= 3; $i++){
+                     $id = $settings->selectCarouselName($i);
+                     echo '<option value="' . $i . '">' . $i . '. ' . $id . '</option>';
+                  }
+               ?>
             </select>
          </div>
          <div class="form-group">

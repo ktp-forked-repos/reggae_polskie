@@ -23,14 +23,14 @@
          <div class="form-group">
             <label class="control-label col-md-3" for="oldpass">Stare hasło:</label>
             <div class="col-md-9 col-xs-12">
-               <input type="password" class="form-control" name="oldpass"  id="oldpass" placeholder="Podaj stare hasło" autocomplete="off" value="<?php echo $this->getData('oldpass'); ?>">
+               <input type="password" class="form-control" name="oldpass"  id="oldpass" placeholder="Stare hasło" autocomplete="off" value="<?php echo $this->getData('oldpass'); ?>">
             </div>
          </div>
 
          <div class="form-group">
             <label class="control-label col-md-3" for="newpass">Nowe hasło:</label>
             <div class="col-md-9 col-xs-12">
-               <input type="password" class="form-control" name="newpass"  id="newpass" placeholder="Podaj nowe hasło" autocomplete="off" value="<?php echo $this->getData('newpass'); ?>">
+               <input type="password" class="form-control" name="newpass"  id="newpass" placeholder="Nowe hasło" autocomplete="off" value="<?php echo $this->getData('newpass'); ?>">
             </div>
          </div>
 

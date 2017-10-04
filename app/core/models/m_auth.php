@@ -1,14 +1,13 @@
 <?php
 
 class Auth{
-   private $salt = 'cds6zc7sdv';
+   private $salt = 'QcZht#82@fdg@435hf-^fdsD3';
    
    function __construct(){
    }
 
    function validateLogin($user, $pass){
       global $CMS;
-
       if($stmt = $CMS->Database->prepare("SELECT * FROM users WHERE login = ? AND password = ?")){
          $stmt->bind_param("ss", $user, md5($pass.$this->salt));
          $stmt->execute();
@@ -73,6 +72,16 @@ class Auth{
          $CMS->Template->error('unauthorized'); 
          exit;
       }
+   }
+
+   function checkError403(){
+      global $CMS;
+         $CMS->Template->error('403'); 
+   }
+
+   function checkErrorDefault(){
+      global $CMS;
+         $CMS->Template->error('default'); 
    }
 
    function getSalt(){

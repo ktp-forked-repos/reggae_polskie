@@ -24,7 +24,10 @@
             <input type="text" name="user_id" id="user_id" class="form-control hidden" value="<?php echo $this->userId(); ?>">
          </div>
          <div class="form-group">
-            <input type="text" name="name" id="name" class="form-control" placeholder="Podaj nazwę zespołu" value="<?php echo $this->getData('name');?>">
+            <input type="text" name="name" id="name" class="form-control" placeholder="Nazwa zespołu" value="<?php echo $this->getData('name');?>">
+         </div>
+         <div class="form-group">
+            <input type="url" name="video" id="video" class="form-control" placeholder="Utwór promujący http://..." value="<?php echo $this->getData('video');?>">
          </div>
          <div class="form-group">
             <label class="col-xs-12" for="content">Opis zespołu:</label>

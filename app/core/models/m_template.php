@@ -62,6 +62,9 @@ class Template{
       if($type == 'unauthorized'){
          $this->load(APP_PATH . 'core/views/v_unauthorized.php');
       }
+      else if($type == '403'){
+         $this->load(APP_PATH . 'core/views/v_error403.php');
+      }
       else{
          $this->load(APP_PATH . 'core/views/v_error.php');
       }

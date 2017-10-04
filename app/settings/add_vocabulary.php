@@ -42,7 +42,7 @@ if(isset($_POST['submit'])){
       $CMS->Template->setAlert('<i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i> Zbyt długi opis - maksymalnie 10000 znaków','danger');
       $CMS->Template->load(APP_PATH . 'settings/views/v_add_vocabulary.php');
    }
-   else if($size_content  != 1){
+   else if($size_letter  != 1){
       $CMS->Template->setAlert('<i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i> Nie można przyporządkować hasła do litery - spróbuj zmienić nazwę lub skontaktuj się z administratorem','danger');
       $CMS->Template->load(APP_PATH . 'settings/views/v_add_vocabulary.php');
    }

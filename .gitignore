@@ -15,6 +15,7 @@ app/res/font-awesome/*
 app/res/colorbox/*
 app/res/images/*
 app/res/tinymce/*
+app/core/models/m_auth.php
 *.sublime-project
 *.sublime-workspace
 *init.php
