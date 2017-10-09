@@ -28,6 +28,7 @@ echo '<div class="tab-content container marg-top-1">';
           };
           foreach($stmt as $row)  
           {
+            $name = htmlentities($row['name'], ENT_QUOTES);
             echo '<a href="' . SITE_PATH . 'bands.php?name=' . $row['name'] . '"><h4 class="row band-name col-xs-12">' . $row['name'] . ' </h4></a>';
           };
       echo '
@@ -40,7 +41,7 @@ echo '<div class="tab-content container marg-top-1">';
           };
           foreach($stmt as $row)  
           {
-            echo '<a href="' . SITE_PATH . 'bands.php?name=' . $row['name'] . '"><h4 class="row band-name col-xs-12">' . $row['name'] . ' </h4></a>';
+            echo '<a href="' . SITE_PATH . 'bands.php?name=' . $row['name']  . '"><h4 class="row band-name col-xs-12">' . $row['name']  . ' </h4></a>';
           };
       echo '
       </div>';

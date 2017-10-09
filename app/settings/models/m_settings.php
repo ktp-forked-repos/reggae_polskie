@@ -68,7 +68,7 @@ class Settings {
       global $CMS;
       if($result = $CMS->Database->query("SELECT id_image, name FROM carousel_image WHERE id_image = '$id_image'")){
          $row = mysqli_fetch_array($result); 
-         echo ' <img src="data:image/jpeg;base64,'.base64_encode($row['name'] ).'" >';
+         echo ' <img class="img-responsive" src="data:image/jpeg;base64,'.base64_encode($row['name'] ).'" >';
          return TRUE;
       }
       else{
