@@ -14,7 +14,17 @@ $settings = new Settings();
    <link rel="stylesheet" type="text/css" href="<?php echo APP_RES?>lightbox/css/lightbox.css">
    <script src="<?php echo APP_RES?>js/jquery-3.2.1.min.js"></script>
    <?php $CMS->head(); ?>
-   <title>Polskie zespoły i artyści muzyki reggae / Polish reggae bands</title>
+
+   <title> 
+      <?php 
+         if(isset($_GET['name'])){ 
+            echo $_GET['name'] . ' - Reggae Polskie';
+         } 
+         else{
+            echo 'Polskie zespoły i artyści muzyki reggae / Polish reggae bands';
+         } 
+      ?> 
+   </title>
 </head>
 <body>
    <?php $CMS->toolbar(); ?>
@@ -33,16 +43,22 @@ $settings = new Settings();
    if(!isset($_GET['name']) || $_GET['name'] == '') {?>
       <section id="bands_list" class="container marg-top-0">
          <?php include('controllers/alerts.php'); ?>
-         <h2 class="pad-bottom-1 text-center">Polskie zespoły i artyści muzyki reggae</h2>
+         <h2 class="text-center">Polskie zespoły i artyści muzyki reggae</h2>
+         <?php include('views/advertisement.php'); ?>
          <?php include('controllers/bands_list.php'); ?>
          <div class="text-red marg-top-1"><strong>lość zespołów w bazie: <?php echo $settings->countBands(); ?></strong></div>
+         <!-- addblock detector -->
+         <div class="no-ads-info">
+            <?php include('views/addblock_detector.php'); ?>
+         </div>
       </section>
    <?php 
    } 
    else { ?>
       <section id="bands_list" class="container marg-top-0">
          <?php include('controllers/alerts.php'); ?>
-         <?php $name = $_GET['name'];?>
+
+         <?php $name = $_GET['name']; ?>
          <?php include('controllers/bands_item.php'); ?>
       </section>
    <?php 
@@ -52,9 +68,6 @@ $settings = new Settings();
    <section id="advertisement" class="container">
       <div class="advertisement col-xs-12">
          <?php include('views/advertisement.php'); ?>
-      </div>
-      <div class="no-ads-info">
-         <?php include('views/addblock_detector.php'); ?>
       </div>
    </section>
 
@@ -85,5 +98,6 @@ $settings = new Settings();
          <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
       </span>
    </a>
+
 </body>
 </html>

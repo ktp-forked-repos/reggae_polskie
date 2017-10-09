@@ -5,7 +5,7 @@
       <li data-target="#myCarousel" data-slide-to="2"></li>
    </ol>
    <div class="carousel-inner">
-     <div class="item active">
+     <div class="item active img-responsive">
          <?php  
             $id_image = 1;
             $settings->selectCarouselImage($id_image);
@@ -13,11 +13,11 @@
             $row = mysqli_fetch_assoc($result);
          ?>  
          <div class="carousel-caption">
-            <h3><?php echo $row['title'] ?></h3>
-            <p><?php echo $row['description'] ?></p>
+            <h3 class="index-text"><?php echo $row['title'] ?></h3>
+            <p class="index-text"><?php echo $row['description'] ?></p>
          </div>
       </div>
-      <div class="item">
+      <div class="item img-responsive">
          <?php  
             $id_image = 2;
             $settings->selectCarouselImage($id_image);
@@ -25,11 +25,11 @@
             $row = mysqli_fetch_assoc($result);    
          ?>
          <div class="carousel-caption">
-            <h3><?php echo $row['title'] ?></h3>
-            <p><?php echo $row['description'] ?></p>
+            <h3 class="index-text"><?php echo $row['title'] ?></h3>
+            <p class="index-text"><?php echo $row['description'] ?></p>
          </div> 
       </div>
-      <div class="item">
+      <div class="item img-responsive">
          <?php  
             $id_image = 3;
             $settings->selectCarouselImage($id_image);
@@ -37,8 +37,8 @@
             $row = mysqli_fetch_assoc($result);        
          ?>
          <div class="carousel-caption">
-            <h3><?php echo $row['title'] ?></h3>
-            <p><?php echo $row['description'] ?></p>
+            <h3 class="index-text"><?php echo $row['title'] ?></h3>
+            <p class="index-text"><?php echo $row['description'] ?></p>
          </div> 
       </div>
    </div>

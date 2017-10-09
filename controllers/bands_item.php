@@ -1,6 +1,5 @@
 <?php
 if(isset($name)){
-   $name = htmlentities($name, ENT_QUOTES);
    $stmt = $settings->selectBand($name);
    $num_rows = mysqli_num_rows($stmt);
    if($num_rows > 0){
