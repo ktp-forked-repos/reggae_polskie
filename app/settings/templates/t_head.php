@@ -20,9 +20,7 @@
             parent.$.colorbox.close();
          });
       });
-
    </script>	
-
    <script type="text/javascript">
       tinyMCE.init({
          // General options
@@ -44,7 +42,6 @@
          theme_advanced_buttons1 : "undo, redo, |, styleselect, formatselect, fontselect, fontsizeselect, |, insertdate,inserttime, search, replace, |, tablecontrols",
          theme_advanced_buttons2 : "bold, italic, underline, strikethrough, | justifyleft, justifycenter, justifyright, justifyfull, |, sub, sup, forecolor, backcolor, |, bullist,numlist,|,outdent,indent,blockquote,|, link, unlink, image, charmap, emotions, iespell, media, hr ",
 
-
          theme_advanced_toolbar_location : "top",
          theme_advanced_toolbar_align : "left",
          theme_advanced_statusbar_location : "bottom",
@@ -58,9 +55,6 @@
          external_link_list_url : "lists/link_list.js",
          external_image_list_url : "lists/image_list.js",
          media_external_list_url : "lists/media_list.js",
-
-
-
       });
    </script>
    <script>  

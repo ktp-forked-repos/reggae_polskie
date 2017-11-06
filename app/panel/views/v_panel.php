@@ -9,7 +9,7 @@
    <div class="col-sm-8 col-xs-12">
       <div class="col-xs-12"><h2>Panel administracyjny</h2></div>
       <div class="col-xs-12">
-         <div class="col-xs-12"><h4>Inforamcje administracyjne</h4></div>
+         <div class="col-xs-12"><h4>Informacje administracyjne</h4></div>
          <ul>
             <li>brak info</li>
          </ul>

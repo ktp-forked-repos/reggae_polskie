@@ -1,5 +1,4 @@
 <?php
-
 class Auth{
    private $salt = 'QcZht#82@fdg@435hf-^fdsD3';
    
@@ -28,7 +27,6 @@ class Auth{
             else{
                die('Błąd komunikacji z bazą danych! Skontaktuj się z administratorem strony');
             }
-
          }
          else{
             $stmt->close();

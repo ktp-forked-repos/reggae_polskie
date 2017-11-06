@@ -15,7 +15,6 @@ if(isset($_POST['submit'])){
    $type = exif_imagetype($image);
    $CMS->Template->setData('id_image', $_POST['id_image']);
 
-
    if($size == 0){
       $CMS->Template->setAlert('<i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i> Wybierz obraz z dysku o maksymalnym rozmiarze 1MB','danger');
       $CMS->Template->load(APP_PATH . 'settings/views/v_linksimage.php');

@@ -26,7 +26,7 @@ foreach($stmt as $row)
    echo ' 
       <div class="row">
          <div class="col-sm-3 col-xs-12">
-            <a href="news.php">
+            <a href="' . SITE_PATH . 'news.php?id=' . $row['news_id']  . '">
                <img class="news-img alt="news" src="data:image/jpeg;base64,'. base64_encode($row['image'] ) .'" >
             </a>
          </div>

@@ -1,5 +1,4 @@
 <?php
-
 class Template{
    private $data;
    private $alertTypes;
@@ -73,7 +72,6 @@ class Template{
    function userId(){
       global $CMS;
       $log = $_SESSION['login'];
-
       $result = $CMS->Database->query("SELECT * FROM users WHERE login = '$log'");
       $row = $result->fetch_assoc();
       $id = $row['user_id'];

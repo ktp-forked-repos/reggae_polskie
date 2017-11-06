@@ -1,6 +1,6 @@
 <script>
-$.colorbox.close();
-window.location.reload();
+   $.colorbox.close();
+   window.location.reload();
 </script>
 <div class="container centered text-center ">
    <div class="loading">

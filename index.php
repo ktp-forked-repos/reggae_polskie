@@ -6,9 +6,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+   <?php include('views/google_analytics.php'); ?>
+   
    <meta charset=utf-8>
    <meta name=viewport content="width=device-width, initial-scale=1">
-   <meta name="Description" content="Portal Reggae Polskie to wszystko czego potrzebujesz o muzyce Reggae/Ragga/Dancehall/Ska/Dub oraz kulturze Rastafari w jednym miejscu. Naszym celem jest promowanie muzyki reggae, imprez i artystów grających nie tylko reggae, ale wszystkie gatunki oscylujące wokół tej muzyki. Reggae Polskie jest DOBRE, BO POLSKIE."/>
+   <meta name="Description" content="Reggae Polskie to wszystko czego potrzebujesz o muzyce reggae, raggamuffin, dancehall, ska czy dub w jednym miejscu. Celem Reggae Polskie jest promowanie muzyki, imprez i artystów grających nie tylko reggae, ale wszystkie gatunki oscylujące wokół tej muzyki. "/>
    <meta name="Keywords" content="reggae, regee, ragga, rege, redzi,  regge, raga, polskie+reggae, reggaepolskie, polskiereggae, roots, dancehall, ska, dub, roots, rockers, polskie, zespoły, maniek, historia, bob, marley, kultura, aktualnosci, plyty, albumy, cd, gatunki,  odmiany, rastafari, koncerty, słownik, slownik, muzyka, muza, music, polish, polen, soundsystem, sound, system, opolskie, opole, namysłów, raggamaniek">
    <link rel="stylesheet" type="text/css" href="<?php echo APP_RES?>bootstrap/css/bootstrap.min.css">
    <link rel="stylesheet" type="text/css" href="<?php echo APP_RES?>font-awesome/css/font-awesome.min.css">

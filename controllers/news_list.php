@@ -48,7 +48,7 @@ foreach($stmt as $row)
    echo ' 
       <div class="row">
          <div class="col-sm-3 col-xs-12">
-            <a href="#news'. $row['news_id'] .'" data-toggle="modal" data-target="#news'. $row['news_id'] .'">
+            <a href="' . SITE_PATH . 'news.php?id=' . $row['news_id']  . '">
                <img class="news-img alt="news" src="data:image/jpeg;base64,'. base64_encode($row['image'] ) .'" >
             </a>';
 
@@ -61,16 +61,10 @@ foreach($stmt as $row)
                <div class="col-sm-10 col-xs-9 news-title">'. $title .'</div>  
                <div class="col-sm-2 col-xs-3 news-date">'. '<small>Dodano:</small><br>' . $day . '.' . $month . '.' . $year .'</div>
             </div>
-            <div class="col-xs-12 news-contents offset-row">'. $content . '<a href="#news'.  $row['news_id'] .'" data-toggle="modal">
+            <div class="col-xs-12 news-contents offset-row">'. $content . '<a href="' . SITE_PATH . 'news.php?id=' . $row['news_id']  . '">
                Zobacz więcej</a>
             </div>  
-         </div>  
-         <div class="col-sm-12">';
-            if(isset($_SESSION['loggedin'])){
-               include("views/news_add_image_form.php");
-               include("views/news_update_form.php");
-            }
-         echo '</div>
+         </div>
       </div>
       <div class="row">
          <div class="col-xs-12"><hr class="news-line"></div>

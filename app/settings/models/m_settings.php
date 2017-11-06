@@ -107,6 +107,16 @@ class Settings {
       return $stmt;
    }
 
+   function selectOneNews($id){
+      global $CMS;
+      if($stmt = $CMS->Database->query("SELECT * FROM news WHERE news_id = '$id'")){
+         return $stmt;
+      }
+      else{
+         return FALSE;
+      }
+   }
+
    function countNews(){
       global $CMS;
       $query = $CMS->Database->query("SELECT COUNT(*) as all_posts FROM news");

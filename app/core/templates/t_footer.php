@@ -31,7 +31,7 @@
 <div class="col-xs-12">
    <small>
       2010 - <?php echo date("Y");?> &#169; Reggae Polskie 
-      <a class="text-white text-center" href="http://www.maciejpowallo.pl/">TtK CMS v. 1.2.1</a> 
+      <a class="text-white text-center" href="http://www.maciejpowallo.pl/">TtK CMS v. 1.2.2</a> 
    </small>
 </div>
 <script src="<?php echo APP_RES?>/js/cookies.min.js"></script>

@@ -10,7 +10,6 @@
    </div>
    <div class="col-sm-8 col-xs-12">
       <div class="form-group"><h3>Lista użytkowników</h3></div>
-
       <table class="table table-bordered">
          <tr>  
             <th>Imię</th>  
@@ -28,7 +27,6 @@
                else{
                   $active = '<i class="fa fa-times fa-2x text-red" aria-hidden="true"></i';
                }
-
                echo ' 
                   <tr>  
                      <td>'. $row['name'] .'</td>  
