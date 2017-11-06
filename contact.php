@@ -66,7 +66,7 @@
                   <div class="col-xs-12 text-center">
                      <div id="success"></div>
                      <button type="submit" class="btn btn-xl btn-green">Wyślij</button>
-                     <button type="reset" class="btn btn-xl">Wyszyść</button>
+                     <button type="reset" class="btn btn-xl">Wyczyść</button>
                   </div>
                </div>
             </form>
