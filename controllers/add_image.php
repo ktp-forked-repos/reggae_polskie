@@ -46,13 +46,10 @@ if(isset($_POST['submit'])){
       if($changed == TRUE){
          $_SESSION['alert'] = '<div class="alert alert-success"><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i> Dodano obraz</div>';
          header('Location: ' . SITE_PATH . 'news.php');
-      } 
-      else {
+      } else {
          $CMS->Auth->checkErrorDefault();
       }
    }
-}
-else{
+} else {
    header('Location: ' . SITE_PATH . 'news.php'); 
 }
-

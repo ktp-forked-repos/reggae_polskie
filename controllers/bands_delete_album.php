@@ -13,11 +13,9 @@ if(isset($_POST['submit'])){
    if($changed == TRUE){
       $_SESSION['alert'] = '<div class="alert alert-success alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i> Album został usunięty</div>';
       header('Location: ' . SITE_PATH . 'bands.php?name=' . $band_name); 
-   } 
-   else {
+   } else {
       $CMS->Auth->checkErrorDefault();
    }
-}
-else{
+} else{
    header('Location: ' . SITE_PATH . 'bands.php?name=' . $band_name); 
 }

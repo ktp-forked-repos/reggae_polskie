@@ -10,6 +10,8 @@
    
   <meta charset=utf-8>
   <meta name=viewport content="width=device-width, initial-scale=1">
+   <meta name="Description" content="Słownik terminologii reggae i rasta po polsku. Zawiera większość zwrotów, którymi posługują się w dredlokach"/>
+   <meta name="Keywords" content="reggae, regee, ragga, rege, redzi,  regge, raga, polskie+reggae, reggaepolskie, polskiereggae, roots, dancehall, ska, dub, roots, rockers, polskie, polska, zespoły, historia, bob, marley, kultura, aktualności, news, plyty, albumy, cd, gatunki, odmiany, rastafari, koncerty, słownik, slownik, dictionary, muzyka, muza, music, polish, polen, soundsystem, sound, system">
   <link rel="stylesheet" type="text/css" href="<?php echo APP_RES?>bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="<?php echo APP_RES?>font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="<?php echo APP_RES?>css/main-style.min.css">

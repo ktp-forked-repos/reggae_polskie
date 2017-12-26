@@ -10,6 +10,7 @@ $settings = new Settings();
    
    <meta charset=utf-8>
    <meta name=viewport content="width=device-width, initial-scale=1">
+   <meta name="Keywords" content="reggae, regee, ragga, rege, regge, raga, polskie+reggae, reggaepolskie, polskiereggae, roots, dancehall, ska, dub, roots, rockers, polskie, zespoły, wykonawca, wykonawcy, artyści, muzyczne, bandy, bands">
    <link rel="stylesheet" type="text/css" href="<?php echo APP_RES?>bootstrap/css/bootstrap.min.css">
    <link rel="stylesheet" type="text/css" href="<?php echo APP_RES?>font-awesome/css/font-awesome.min.css">
    <link rel="stylesheet" type="text/css" href="<?php echo APP_RES?>css/main-style.min.css">

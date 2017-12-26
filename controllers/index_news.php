@@ -43,5 +43,3 @@ foreach($stmt as $row)
       </div>
    ';
 };
-
-

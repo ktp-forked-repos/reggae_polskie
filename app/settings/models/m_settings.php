@@ -341,4 +341,21 @@ class Settings {
          return FALSE;
       }
    }
+
+// Bands -------------------------------------------------------------------------------------------
+  function createVideo($video_link, $artist, $title){
+      global $CMS;
+      if($stmt = $CMS->Database->query("INSERT INTO video (video_link, artist, title) VALUES ('$video_link', '$artist', '$title')")){
+         return TRUE;
+      }
+      else{
+         return FALSE;
+      }
+   }
+
+   function selectRandomVideo(){
+      global $CMS;
+      $videos = $CMS->Database->query("SELECT * FROM video ORDER BY RAND() LIMIT 1");
+      return $videos;
+   }
 }

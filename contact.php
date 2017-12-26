@@ -6,6 +6,8 @@
    
    <meta charset=utf-8>
    <meta name=viewport content="width=device-width, initial-scale=1">
+   <meta name="Description" content="Reggae Polskie to wszystko czego potrzebujesz o muzyce reggae w jednym miejscu. Skontaktuj się z nami, a my odpowiemy najszybciej jak tylko będzie to możliwe."/>
+   <meta name="Keywords" content="reggae, regee, ragga, rege, redzi, regge, raga, polskie+reggae, reggaepolskie, polskiereggae, muzyka, muza, music, polish, polen, soundsystem, kontakt, contact">
    <link rel="stylesheet" type="text/css" href="<?php echo APP_RES?>bootstrap/css/bootstrap.min.css">
    <link rel="stylesheet" type="text/css" href="<?php echo APP_RES?>font-awesome/css/font-awesome.min.css">
    <link rel="stylesheet" type="text/css" href="<?php echo APP_RES?>css/main-style.min.css">

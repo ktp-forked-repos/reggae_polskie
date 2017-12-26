@@ -19,6 +19,9 @@
          <a href="<?php SITE_PATH ?>../settings/carouselimage.php">Home -> edycja karuzeli</a>
       </li>
       <li>
+         <a href="<?php SITE_PATH ?>../settings/add_video.php">Home -> dodanie video</a>
+      </li>
+      <li>
          <a href="<?php SITE_PATH ?>../settings/add_news.php">Newsy -> nowy wpis</a>
       </li>
       <li>

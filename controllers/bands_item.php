@@ -20,11 +20,9 @@ else if(isset($name) && $name === $name_test){
          }
          include("views/bands_item_form.php");
       };
-   }
-   else{
+   } else {
       die ('<h4 class="row entry-empty col-xs-12"><i class="fa fa-meh-o" aria-hidden="true"> brak w bazie zespołu o podanej nazwie</h4>');
    }
-}
-else{
+} else {
       die ('<h4 class="row entry-empty col-xs-12"><i class="fa fa-meh-o" aria-hidden="true"> Hmmm... coś poszło nie tak - spróbuj jeszcze raz </h4>');
 }

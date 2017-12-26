@@ -45,7 +45,6 @@ if(isset($_POST['submit'])){
          $CMS->Auth->checkErrorDefault();
       }
    }
-}
-else {
+} else {
    header('Location: ' . SITE_PATH . 'news.php'); 
 }

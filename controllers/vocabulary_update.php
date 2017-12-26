@@ -15,8 +15,6 @@ if(isset($_POST['submit'])){
    $size_content = strlen($content);
    $size_letter = strlen($letter);
 
-
-
    if($title == '' ){
       $_SESSION['alert'] = '<div class="alert alert-danger alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i> Pole hasło jest obowiązkowe</div>';
       header('Location: ' . SITE_PATH . 'vocabulary.php'); 
@@ -41,7 +39,6 @@ if(isset($_POST['submit'])){
       $_SESSION['alert'] = '<div class="alert alert-danger alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i> Nie można przyporządkować hasła do litery - spróbuj zmienić nazwę lub skontaktuj się z administratorem</div>';
       header('Location: ' . SITE_PATH . 'vocabulary.php'); 
    }
-
    else{
       $changed = $settings->updateEntry($entry_id, $title, $content, $letter);
 
@@ -49,12 +46,10 @@ if(isset($_POST['submit'])){
          $_SESSION['alert'] = '<div class="alert alert-success alert-dismissable"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i> Wpis został zaktualizowany</div>';
          header('Location: ' . SITE_PATH . 'vocabulary.php');
 
-      } 
-      else {
+      } else {
          $CMS->Auth->checkErrorDefault();
       }
    }
-}
-else {
+} else {
    header('Location: ' . SITE_PATH . 'vocabulary.php'); 
 }

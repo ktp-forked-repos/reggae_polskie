@@ -11,7 +11,7 @@
    <meta charset=utf-8>
    <meta name=viewport content="width=device-width, initial-scale=1">
    <meta name="Description" content="Reggae Polskie to wszystko czego potrzebujesz o muzyce reggae, raggamuffin, dancehall, ska czy dub w jednym miejscu. Celem Reggae Polskie jest promowanie muzyki, imprez i artystów grających nie tylko reggae, ale wszystkie gatunki oscylujące wokół tej muzyki. "/>
-   <meta name="Keywords" content="reggae, regee, ragga, rege, redzi,  regge, raga, polskie+reggae, reggaepolskie, polskiereggae, roots, dancehall, ska, dub, roots, rockers, polskie, zespoły, maniek, historia, bob, marley, kultura, aktualnosci, plyty, albumy, cd, gatunki,  odmiany, rastafari, koncerty, słownik, slownik, muzyka, muza, music, polish, polen, soundsystem, sound, system, opolskie, opole, namysłów, raggamaniek">
+   <meta name="Keywords" content="reggae, regee, ragga, rege, redzi,  regge, raga, polskie+reggae, reggaepolskie, polskiereggae, roots, dancehall, ska, dub, roots, rockers, polskie, polska, zespoły, historia, bob, marley, kultura, aktualności, news, plyty, albumy, cd, gatunki, odmiany, rastafari, koncerty, słownik, slownik, muzyka, muza, music, polish, polen, soundsystem, sound, system">
    <link rel="stylesheet" type="text/css" href="<?php echo APP_RES?>bootstrap/css/bootstrap.min.css">
    <link rel="stylesheet" type="text/css" href="<?php echo APP_RES?>font-awesome/css/font-awesome.min.css">
    <link rel="stylesheet" type="text/css" href="<?php echo APP_RES?>css/main-style.min.css">
@@ -44,20 +44,25 @@
          <?php include('controllers/index_news.php'); ?>
       </div>
       <div class="advertisement col-sm-4">
+         <?php include('controllers/index_random_video.php'); ?>
          <?php include('views/advertisement.php'); ?>
       </div>
       <div class="no-ads-info">
          <?php include('views/addblock_detector.php'); ?>
       </div>
    </section>
-     
+
    <!--      Links       -->
    <section id="links" class="row col-xs-12 text-center links-marg">
       <div>
          <?php include('controllers/index_links.php'); ?>
       </div>
-      <div class="advertisement col-xs-12">
+      <div class="advertisement col-sm-6 col-xs-12 centered">
          <?php include('views/advertisement.php'); ?>
+      </div>
+      <div class="advertisement col-sm-6 col-xs-12 centered">
+         <?php include('views/advertisement.php'); ?>
+      </div>
       </div>
    </section>
 
