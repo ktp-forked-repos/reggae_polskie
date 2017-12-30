@@ -74,9 +74,6 @@
             </form>
          </div>
       </div>
-      <div class="no-ads-info">
-         <?php include('views/addblock_detector.php'); ?>
-      </div>
    </section>
 
 

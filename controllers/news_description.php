@@ -14,7 +14,11 @@ if($num_rows > 0){
     foreach($stmt as $row)  
     {
         $content = $row['content'];
-        $content = str_replace("<p>","", $content);
+        $characters = ["<p>", "</p>", "<br />", "<span>", "</span>"];
+        foreach($characters as $char)
+        {
+            $content = str_replace($char,"", $content);
+        }
         if (strlen($content) > 300) {
             $contentCut = substr($content, 0, 300);
             $content = substr($contentCut, 0, strrpos($contentCut, ' ')); 

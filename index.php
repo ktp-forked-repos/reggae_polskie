@@ -40,20 +40,19 @@
 
    <!--      News       -->
    <section id="news" class="container">
-      <div class="col-sm-8 marg-top-1">	
+      <div class="col-sm-8 ">	
          <?php include('controllers/index_news.php'); ?>
       </div>
-      <div class="advertisement col-sm-4">
-         <?php include('controllers/index_random_video.php'); ?>
-         <?php include('views/advertisement.php'); ?>
-      </div>
-      <div class="no-ads-info">
-         <?php include('views/addblock_detector.php'); ?>
+      <div class="col-sm-4">
+         <div><?php include('controllers/index_random_video.php'); ?></div>
+         <div><?php include('views/advertisement.php'); ?></div>
+         
+         
       </div>
    </section>
 
    <!--      Links       -->
-   <section id="links" class="row col-xs-12 text-center links-marg">
+   <section id="links" class="col-xs-12 text-center links-marg">
       <div>
          <?php include('controllers/index_links.php'); ?>
       </div>
@@ -63,6 +62,8 @@
       <div class="advertisement col-sm-6 col-xs-12 centered">
          <?php include('views/advertisement.php'); ?>
       </div>
+      <div class="no-ads-info">
+         <?php include('views/addblock_detector.php'); ?>
       </div>
    </section>
 
