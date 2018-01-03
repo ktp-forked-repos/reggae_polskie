@@ -1,4 +1,4 @@
-<div class="marg-top-1">
+<div class="advertisement marg-top-1">
    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
    <!-- Responsive baner -->
    <ins class="adsbygoogle"

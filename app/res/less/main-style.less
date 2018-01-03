@@ -1,7 +1,7 @@
 @import "variables.less";
 @import "mixins.less";
 
-// Global Components----------------------------------------------------------------------------------
+//----------------------------------- Global Components -----------------------------------
 body {
    overflow-x: hidden;
    .body-font;
@@ -127,7 +127,7 @@ ol, ol li, .num_ist{
    }
 }
 
-//----------------------------Alerts-------------------------------------
+//----------------------------------- Alerts -----------------------------------
 ul>li.alert {
    list-style: none;
    margin-right: 30px;
@@ -141,7 +141,7 @@ ul>li.alert {
    -ms-transform: translate(-50%, -50%);
 }
 
-// ---------------------------Navigation Bar------------------------------
+//----------------------------------- Navigation Bar -----------------------------------
 .navbar-custom {
    background: @bg-secondary;
    .navbar-brand {
@@ -332,8 +332,7 @@ ul>li.alert {
    }
 }
 
-
-//---------------------------Carousel-------------------------------------
+//----------------------------------- Carousel -----------------------------------
 .item{
    height: auto;
    width: 100%;
@@ -345,7 +344,7 @@ ul>li.alert {
 }
 
 .thumbnail{
-   margin: 40px 10px;
+   margin: 0;
 }
 
 #bg_nav {
@@ -369,12 +368,16 @@ ul>li.alert {
 .index-text{
    color: @white; 
    font-size: 800;
-
    text-shadow: 5px 5px 5px rgb(0,0,0),1px 1px 2px rgb(0,0,0);
 }
 
+@media only screen and(max-width:768px) {
+   .index-text{
+      visibility: hidden;
+   }
+}
 
-//---------------------------Links section-------------------------------------
+//----------------------------------- Links section -----------------------------------
 .links-marg{
    padding-top: 0;
 }
@@ -425,20 +428,19 @@ a{
    }
 }
 
-
-//---------------------------News-------------------------------------
-.news-title{
+//----------------------------------- News -----------------------------------
+.news-title {
    .news-font();
    font-size: 1.5em;
    color: @text-green;
 }
 
-.news-contents{
+.news-contents {
    .news-font();
    font-size: 1em;
 }
 
-.news-date{
+.news-date {
    font-size: 0.9em; 
    font-weight: 600;
    text-align: center; 
@@ -446,7 +448,7 @@ a{
    float: right;
 }
 
-.news-img{
+.news-img {
    width: 120px; 
    height: 120px; 
    border: 1px solid #ddd;
@@ -458,18 +460,18 @@ a{
    }
 }
 
-.news-line{
+.news-line {
    border: 0; 
    background: @text-red;
    height: 2px;
    margin: 30px 0;
 }
 
-.news-space{
+.news-space {
    margin-top: 100px;
 }
 
-@media(max-width:1200px){
+@media(max-width:1200px) {
    .news-img{
       height: 125px; 
       width: 125px; 
@@ -477,7 +479,7 @@ a{
    }
 }
 
-@media(max-width:992px){
+@media(max-width:992px) {
    .news-img{
       height: 100px; 
       width: 100px; 
@@ -485,15 +487,16 @@ a{
    }
 }
 
-@media only screen and(max-width:768px){
+@media only screen and(max-width:768px) {
    .news-img{
-      width: 100%; 
+      width: 100%;
+      margin-bottom: 20px; 
       height: auto; 
       overflow: hidden; 
    }
 }
 
-.box_news{
+.box_news {
    margin-top: 50px;
    border: 2px solid @bg-primary;
    .box{
@@ -504,7 +507,7 @@ a{
       overflow: hidden; 
       
    }
-   .image{
+   .image {
       height: 102%;
       width: auto;
       margin: 0;
@@ -524,13 +527,77 @@ a{
    }
 }
 
-.button_margin{
+.button_margin {
    padding: 0 3px;
 }
 
+//----------------------------------- Labels -----------------------------------
 
-// SALE ---------------------------------------------------------------------------
-.sale{
+
+.label .label-content {
+   display: inline-block;
+   width: auto;
+   margin: 0 20px 20px 20px;
+   -webkit-transform: skewy(-2deg);
+   -webkit-backface-visibility: hidden;
+   -webkit-transition: 100ms all;
+}
+
+.label .label-content:after,
+.label .label-content:before {
+   content: '';
+   position: absolute;
+   width: 30%;
+   height: 100%;
+   background: @gray-new-dark;
+   -webkit-transform: skewY(8deg);
+   x-index: -3;
+   border-radius: 4px;
+}
+
+.label .label-content:after {
+   right: 0;
+   top: -4px; 
+   background-image: -webkit-linear-gradient(left, transparent 0%, rgba(0,0,0,.4) 100%);
+}
+
+.label .label-content:before {
+   left: 0;
+   bottom: -4px;
+   background-image: -webkit-linear-gradient(right, transparent 0%, rgba(0,0,0,.4) 100%);
+}
+
+.label .label-content span {
+   text-transform: uppercase;
+   text-align: center;
+   font-family: 'Squada One', cursive;
+   font-weight: 800;
+   font-size: 26px;
+   display: block;
+   padding: 8px 16px;
+   position: relative;
+   z-index: 1;
+   background: @white;
+   color: @gray-dark;
+   -webkit-transition: 1s all;
+   background-size: 4px 4px;
+   text-shadow: 1px 1px 0px @white, 2px 2px 0px @gray-new-dark, 3px 3px 0px @white;
+   background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,.05) 100%);
+   background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, rgba(0,0,0,.15) 25%, rgba(0,0,0,.15) 50%, 
+      transparent 50%, transparent 75%, rgba(0,0,0,.15) 75%);
+   box-shadow: 0 0 0 1px rgba(0,0,0,.4) inset, 0 0 20px -5px rgba(0,0,0,.4), 0 0 0px 3px #FFF inset;
+}
+
+.label .label-content a  {
+   :active,
+   :hover {
+      color: @text-green;
+   }
+}
+
+
+//-----------------------------------  SALE -----------------------------------
+.sale {
    margin-top: 60px;
    .container {
       position: relative;
@@ -586,7 +653,7 @@ a{
    }
 }
 
-// Contact Section ----------------------------------------------------------------------------------
+//----------------------------------- Contact Section -----------------------------------
 
 section#contact {
    background-color: @bg-secondary;
@@ -620,12 +687,12 @@ section#contact {
       font-weight: 700;
       color: @gray-light;
    }
-   :-moz-placeholder { /* Firefox 18- */
+   :-moz-placeholder { 
       .heading-font;
       font-weight: 700;
       color: @gray-light;
    }
-   ::-moz-placeholder {  /* Firefox 19+ */
+   ::-moz-placeholder { 
       .heading-font;
       font-weight: 700;
       color: @gray-light;
@@ -661,8 +728,7 @@ section#contact {
    }
 };
 
-// Footer ----------------------------------------------------------------------------------
-
+//----------------------------------- Footer -----------------------------------
 footer {
    padding: 35px 0 6px 0;
    text-align: center;
@@ -686,7 +752,7 @@ footer {
    color: @text-invers;
 }
 
-//----------------------------------Scroll button-------------------------------------------------------
+//----------------------------------- Scroll button -----------------------------------
 .scroll-button{
    z-index: 9999;
 }
@@ -703,8 +769,12 @@ footer {
    opacity:1;
 }
 
-// Highlight Color Customization----------------------------------------------------------------------------------
+//----------------------------------- advertisement -----------------------------------
+.advert-half-top > .advertisement {
+   margin-top: 20px;
+}
 
+//----------------------------------- Highlight Color Customization -----------------------------------
 ::-moz-selection {
    text-shadow: none;
    background: @gray-light;
@@ -727,10 +797,7 @@ body {
    webkit-tap-highlight-color: @theme-primary;
 }
 
-
-//--------------------TOOLBAR---------------------------
-
-
+//----------------------------------- TOOLBAR -----------------------------------
 .toolbar{
    position: fixed;
    display: block;
@@ -745,7 +812,6 @@ body {
    pointer-events: none;
    cursor: default;
 }
-
 
 @media only screen and(max-width:768px){
    .toolbar{
@@ -764,9 +830,7 @@ body {
    }
 }
 
-
-//--------------------------- EDIT CONTENT ---------------------------
-
+//----------------------------------- EDIT CONTENT -----------------------------------
 .cms_edit {
    position: relative;
    padding: 10px 5px;
@@ -807,7 +871,7 @@ body {
 }
 
 
-//--------------------------- NAV ---------------------------
+//----------------------------------- NAV -----------------------------------
 
 #empty_block {
    height: 200px;
@@ -861,38 +925,36 @@ body {
       padding-bottom: 90%;
    }
 
-   #empty_block{
+   #empty_block {
       height: 100px;
       background-size: auto 100%;
    }
 
-   #name_block{
+   #name_block {
       height: auto; 
       background-size: auto 100%;
    }
 
-   .name{
+   .name {
       padding: 0;
    }
 }
 
-// Security -------------------------------------------------------------------------------------------
-.paragraph{
+//----------------------------------- Security -----------------------------------
+.paragraph {
    margin: 50px auto;
    height: 150px;
 }
 
 @media only screen and(max-width:768px){
-   .paragraph{
+   .paragraph {
       margin: 20px auto 0 auto;
       padding: 0;
       height: 50px;
    }
 }
 
-// Portfolio Section ----------------------------------------------------------------------------------
-
-
+//----------------------------------- Portfolio Section -----------------------------------
 .news-modal {
    .modal-dialog {
       margin: 0;
@@ -946,7 +1008,7 @@ body {
    }
 }
 
-//Pagination ----------------------------------------------------------------------------------
+//----------------------------------- Pagination -----------------------------------
 .pagination > li > a,
 .pagination > li > span {
    color: @text-muted;
@@ -962,6 +1024,7 @@ body {
    background-color: rgba(168,0,2, 0.1);
    border-color: @gray-new-dark;
 }
+
 .pagination > .active > a,
 .pagination > .active > span,
 .pagination > .active > a:hover,
@@ -973,6 +1036,7 @@ body {
    background-color: @bg-red;
    border-color: @gray-new-light;
 }
+
 .pagination > .disabled > span,
 .pagination > .disabled > span:hover,
 .pagination > .disabled > span:focus,
@@ -985,7 +1049,7 @@ body {
    border-color: @gray-new-light;
 }
 
-//Investments -------------------------------------------------------------------------------------
+//----------------------------------- Investments -----------------------------------
 .title_font{
    font-family: @font-secondary;
    font-size: 40px;
@@ -1013,7 +1077,7 @@ body {
    padding: 0;
 }
 
-.sold-img{
+.sold-img {
    position:absolute;
    width: 140px;
    left: 20px;
@@ -1022,7 +1086,7 @@ body {
    padding: 0;
 }
 
-.non_margin{
+.non_margin {
    margin-top: 16px;
    margin-left: 0;
    margin-right: 0;
@@ -1030,7 +1094,7 @@ body {
    padding-right: 0;
 }
 
-.box_invest{
+.box_invest {
    border: 2px solid @white;
    .box{
       height: 90px; 
@@ -1039,7 +1103,7 @@ body {
       border: 2px solid @white;
       overflow: hidden; 
    }
-   .image{
+   .image {
       height: 102%;
       width: auto;
       margin: 0;
@@ -1059,33 +1123,33 @@ body {
    }
 }
 
-// Facebook -------------------------------------------------------------------------------------
+//----------------------------------- Facebook -----------------------------------
 #fb-comments {
    height: auto;
 }
 
-// Video ----------------------------------------------------------------------------------------
+//----------------------------------- Video -----------------------------------
 .video {
    border: 3px solid #aaa;
    border-radius: 10px;
 }
 
 .random-video {
-   margin: 0;
+   margin: 0 10px;
    border-radius: 10px 10px 0 0;
 }
 
 .random-video-desc {
-   margin:0;
-   width: 100%;
+   margin: 0 10px;
+   width: auto;
    padding: 10px;
    text-align: center;
    color: @text-invers;
    background-color: @gray-base;
-   border-radius: 0 0 10px 10px ;
+   border-radius: 0 0 10px 10px;
 }
 
-// Vocabulary ----------------------------------------------------------------------------------
+//----------------------------------- Vocabulary -----------------------------------
 .entry-title {
    color: @text-red;
    margin: 20px 0 0 10px;
@@ -1102,7 +1166,7 @@ body {
    font-weight: 800;
 }
 
-// Band ----------------------------------------------------------------------------------------
+//----------------------------------- Band -----------------------------------
 .band-title {
 
    line-height: 1em;
@@ -1113,23 +1177,22 @@ body {
    text-shadow: 0px 0px 0 rgb(168,0,2),1px 1px 0 rgb(128,0,2),2px 2px 0 rgb(108,0,2),3px 3px 0 rgb(90,0,2),4px 4px 0 rgb(70,0,2), 5px 5px 0 rgb(60,0,2),6px 6px 5px rgba(0,0,0,0.95),6px 6px 1px rgba(0,0,0,0.5),0px 0px 5px rgba(0,0,0,.2);
    text-align: center;
    margin: 50px 0;
-
 }
 
 .album-classifier {
    margin: 20px 0;
-   hr{ 
+   hr { 
       border: 0; 
       height: 0;  
       box-shadow: 0 0 3px 1px @text-red; 
-      } 
+   } 
 
    hr:after {
       content: "\00a0";
    }
 }
 
-.album-title{
+.album-title {
    color: @text-red; 
    text-shadow: 1px 1px 1px rgb(150,150,150),1px 1px 2px rgb(168,0,2, 0.3);
    font-size: 1.2em;
@@ -1138,7 +1201,7 @@ body {
    margin-top: 20px;
 }
 
-.album-description{
+.album-description {
    margin: 10px 0 30px 30px;
 }
 
@@ -1148,7 +1211,7 @@ body {
    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.19);  
 }
 
-@media only screen and(max-width:768px){
+@media only screen and(max-width:768px) {
    .album-description{
       margin: 10px 0 30px 0;
       padding: 0;
@@ -1166,12 +1229,16 @@ body {
       margin-top: 60px;
    }
 
-   .thumbnail{
-   margin: 40px 0;
-}
+   .thumbnail {
+      margin: 20px 0;
+   }
+
+   .thumbnail:first-child {
+      margin: 0 0 20px 0;
+   }
 }
 
-@media (min-width:1400px){
+@media (min-width:1400px) {
    .item{
       margin-top: 3%;
    }

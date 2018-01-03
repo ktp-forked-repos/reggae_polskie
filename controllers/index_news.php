@@ -1,6 +1,11 @@
 <?php
 $stmt = $settings->selectThree();
 $row = mysqli_fetch_array($stmt);
+   echo'
+      <div class="row label">
+         <div class="label-content"><span>newsy</span></div>
+      </div>
+   ';
 
 foreach($stmt as $row)  
 {

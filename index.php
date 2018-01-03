@@ -40,19 +40,22 @@
 
    <!--      News       -->
    <section id="news" class="container">
-      <div class="col-sm-8 ">	
+      <div class="col-sm-8">	
          <?php include('controllers/index_news.php'); ?>
       </div>
       <div class="col-sm-4">
          <div><?php include('controllers/index_random_video.php'); ?></div>
-         <div><?php include('views/advertisement.php'); ?></div>
-         
+         <div class="advert-half-top"><?php include('views/advertisement.php'); ?></div>
          
       </div>
    </section>
 
+   <section id="accordion" class="container marg-top-1">
+      <?php include('views/reggae_history.php'); ?>
+   </section>
+
    <!--      Links       -->
-   <section id="links" class="col-xs-12 text-center links-marg">
+   <section id="links" class="col-xs-12 links-marg marg-top-1">
       <div>
          <?php include('controllers/index_links.php'); ?>
       </div>
@@ -61,9 +64,6 @@
       </div>
       <div class="advertisement col-sm-6 col-xs-12 centered">
          <?php include('views/advertisement.php'); ?>
-      </div>
-      <div class="no-ads-info">
-         <?php include('views/addblock_detector.php'); ?>
       </div>
    </section>
 

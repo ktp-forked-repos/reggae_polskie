@@ -1,7 +1,12 @@
 <?php
+echo '
+   <div class="row label">
+       <div class="label-content"><span>polecamy</span></div>
+   </div>
+';
 for($i = 4; $i < 10; $i++){
    echo '
-   <div class="col-md-2">
+   <div class="col-md-2 text-center">
       <div class="thumbnail box-shadow">';
          $result = $settings->selectCarouselContent($i);
          $row = mysqli_fetch_assoc($result);
