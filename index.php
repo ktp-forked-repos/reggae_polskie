@@ -29,7 +29,7 @@
    </section>
 
    <!--      Carousele       -->
-   <section class="row">
+   <section id="carousel">
       <?php include('controllers/index_carousel.php'); ?>
    </section>
 
@@ -46,7 +46,7 @@
       <div class="col-sm-4">
          <div><?php include('controllers/index_random_video.php'); ?></div>
          <div class="advert-half-top"><?php include('views/advertisement.php'); ?></div>
-         
+         <div class="no-ads-info"><?php include('views/addblock_detector.php'); ?></div>
       </div>
    </section>
 

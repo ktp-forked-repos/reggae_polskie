@@ -3,7 +3,7 @@
 $query = $settings->countNews();
 $row = mysqli_fetch_assoc($query);
 $all_posts = $row['all_posts'];
-$onpage = 10;
+$onpage = 5;
 $navnum = 5;
 $allpages = ceil($all_posts/$onpage);
 
@@ -91,7 +91,7 @@ foreach($stmt as $row)
    $next = $page + 1;
    $script_name = $_SERVER['SCRIPT_NAME'];
 
-   echo '<div class="row col-sm-9 col-xs-12 text-center">
+   echo '<div class="row col-sm-9 col-xs-12 text-center centered">
    <ul class="pagination">
    ';
    if($page > 1) echo '<li><a href="' . $script_name . '?page=' . $prev . '""> <i class="fa fa-chevron-left" aria-hidden="true"></i> </a></li>';

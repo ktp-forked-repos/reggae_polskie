@@ -14,7 +14,7 @@ if($num_rows > 0){
     foreach($stmt as $row)  
     {
         $content = $row['content'];
-        $characters = ["<p>", "</p>", "<br />", "<span>", "</span>"];
+        $characters = ["<p>", "</p>", "<br />", "<span>", "</span>", "<br>"];
         foreach($characters as $char)
         {
             $content = str_replace($char,"", $content);

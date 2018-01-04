@@ -3,7 +3,10 @@ $stmt = $settings->selectThree();
 $row = mysqli_fetch_array($stmt);
    echo'
       <div class="row label">
-         <div class="label-content"><span>newsy</span></div>
+         <div class="label-content" style="margin-bottom: 0"><span>newsy</span></div>
+      </div>
+      <div class="row">
+         <hr class="news-line">  
       </div>
    ';
 
