@@ -46,7 +46,7 @@
       <div class="col-sm-4">
          <div><?php include('controllers/index_random_video.php'); ?></div>
          <div class="advert-half-top"><?php include('views/advertisement.php'); ?></div>
-         <div class="no-ads-info"><?php include('views/addblock_detector.php'); ?></div>
+         <div class="no-ads-info"><?php //include('views/addblock_detector.php'); ?></div>
       </div>
    </section>
 
@@ -85,7 +85,7 @@
    <script src="<?php echo APP_RES?>js/main-style.js"></script>
    <script src="<?php echo APP_RES?>js/facebook-comments.js"></script>
    <script src="<?php echo APP_RES?>js/scroll-to-top.min.js"></script>
-   <script src="<?php echo APP_RES?>js/addblock_detector.js"></script>
+   <script src="<?php //echo APP_RES?>js/addblock_detector.js"></script>
 
    <!--      scroll-to-top      -->
    <a href="" id="scroll-to-top" >

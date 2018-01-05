@@ -17,14 +17,17 @@
       <a class="text-white text-center" href="<?php echo SITE_PATH;?>privacy-policy.php"><i class="fa fa-hashtag" aria-hidden="true"></i> Polityka prywatności</a>
    </div>
    <div class="col-sm-4">
-      <a class="developer" href="https://www.facebook.com/pages/Reggae-Polskie/121896674586843" target="_blank">
+      <a class="developer facebook" href="https://www.facebook.com/official.reggaepolskie" target="_blank">
          <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
       </a>
-      <a class="developer" href="http://www.youtube.com/user/leonxes23" target="_blank">
+      <a class="developer youtube" href="http://www.youtube.com/user/leonxes23" target="_blank">
          <i class="fa fa-youtube-square fa-3x" aria-hidden="true"></i>
       </a>
-      <a class="developer" href="https://plus.google.com/105532963498906659291" rel="publisher" target="_blank">
+      <a class="developer google-plus" href="https://plus.google.com/105532963498906659291" rel="publisher" target="_blank">
          <i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i>
+      </a>
+      <a class="developer twitter" href="https://twitter.com/reggaepolskie" rel="publisher" target="_blank">
+         <i class="fa fa-twitter-square  fa-3x" aria-hidden="true"></i>
       </a>
    </div>
 </div>

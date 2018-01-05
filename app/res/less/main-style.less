@@ -752,7 +752,7 @@ footer {
    }
 }
 
-.developer{
+.developer {
    color: @text-invers;
    margin-bottom: 24px;
    padding-bottom: 0;
@@ -761,6 +761,50 @@ footer {
 
 .white_link{
    color: @text-invers;
+}
+
+.facebook {
+   :hover {
+      color: @facebook;
+   }
+   :active,
+   :focus {
+      color: darken(@facebook, 10%);
+      transform: rotate(10deg);
+   }
+}
+
+.youtube {
+   :hover {
+      color: @youtube;
+   }
+   :active,
+   :focus {
+      color: darken(@youtube, 10%);
+      transform: rotate(10deg);
+   }
+}
+
+.google-plus {
+   :hover {
+      color: @google-plus;
+   }
+   :active,
+   :focus {
+      color: darken(@google-plus, 10%);
+      transform: rotate(10deg);
+   }
+}
+
+.twitter {
+   :hover {
+      color: @twitter;
+   }
+   :active,
+   :focus {
+      color: darken(@twitter, 10%);
+      transform: rotate(10deg);
+   }
 }
 
 //----------------------------------- Scroll button -----------------------------------
@@ -886,14 +930,14 @@ body {
 
 #empty_block {
    height: 200px;
-   background-image: linear-gradient(to bottom, rgba(150, 150, 150, 0.8) 0%,rgba(255, 255, 255, 0.8) 100%), url('../images/main/building.jpg');
+   background-image: linear-gradient(to bottom, rgba(150, 150, 150, 0.8) 0%,rgba(255, 255, 255, 0.8) 100%);
    background-attachment:fixed;  
    background-size: 100% auto;
 }
 
 #name_block {
    height: 200px;
-   background-image: linear-gradient(to bottom, rgba(150, 150, 150, 0.8) 0%,rgba(255, 255, 255, 0.8) 100%), url('../images/main/building.jpg');
+   background-image: linear-gradient(to bottom, rgba(150, 150, 150, 0.8) 0%,rgba(255, 255, 255, 0.8) 100%);
    background-attachment:fixed;  
    background-size: 100% auto;
 }
@@ -974,7 +1018,6 @@ body {
       width: 100%;
    }
    .modal-content {
-      border-radius: 0;
       background-clip: border-box;
       -webkit-box-shadow: none;
       box-shadow: none;

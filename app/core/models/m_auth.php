@@ -1,5 +1,8 @@
 <?php
+   error_reporting(E_ERROR);
+
 class Auth{
+
    private $salt = 'QcZht#82@fdg@435hf-^fdsD3';
    
    function __construct(){

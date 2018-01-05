@@ -3,7 +3,7 @@
 ?>
 
 <div class="container">
-   <div class="col-sm-4 col-xs-12 offset-50">
+   <div class="col-sm-4 col-xs-12 ">
       <?php include('../settings/templates/t_nav.php'); ?>
    </div>
    <div class="col-sm-8 col-xs-12">
