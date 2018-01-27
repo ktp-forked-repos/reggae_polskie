@@ -20,10 +20,10 @@
       <a class="developer facebook" href="https://www.facebook.com/official.reggaepolskie" target="_blank">
          <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
       </a>
-      <a class="developer youtube" href="http://www.youtube.com/user/leonxes23" target="_blank">
+      <a class="developer youtube" href="https://www.youtube.com/c/ReggaePolskieRaggamaniek" target="_blank">
          <i class="fa fa-youtube-square fa-3x" aria-hidden="true"></i>
       </a>
-      <a class="developer google-plus" href="https://plus.google.com/105532963498906659291" rel="publisher" target="_blank">
+      <a class="developer google-plus" href="https://plus.google.com/+ReggaePolskieRaggamaniek" rel="publisher" target="_blank">
          <i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i>
       </a>
       <a class="developer twitter" href="https://twitter.com/reggaepolskie" rel="publisher" target="_blank">

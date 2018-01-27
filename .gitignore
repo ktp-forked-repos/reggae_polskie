@@ -19,3 +19,8 @@ app/res/tinymce/*
 app/core/models/m_auth.php
 *.sublime-project
 *.sublime-workspace
+node_modules/*
+.idea/*
+package-lock.json
+.editorconfig
+.idea

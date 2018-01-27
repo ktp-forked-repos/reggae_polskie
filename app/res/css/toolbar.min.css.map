@@ -1,1 +1,1 @@
-{"version":3,"sources":["toolbar.less"],"names":[],"mappings":"AAAA,kBACC,SAOD,wBALuC,iBACnC,kBACF","file":"toolbar.min.css","sourceRoot":"..\\less"}
+{"version":3,"names":[],"mappings":"","sources":["toolbar.min.css"],"sourcesContent":[".navbar-fixed-top{top:50px}@media only screen and (max-width:768px){.navbar-fixed-top{top:0}}\n/*# sourceMappingURL=toolbar.min.css.map */\n\n/*# sourceMappingURL=toolbar.min.css.map */\n"],"file":"toolbar.min.css"}
