@@ -87,10 +87,10 @@ if (!isset($_GET['name']) || $_GET['name'] == '') { ?>
 </footer>
 
 <?php //scripts ?>
-<script src="<?php echo APP_RES ?>/lightbox/js/lightbox.js"></script>
-<script src="<?php echo APP_RES ?>/bootstrap/js/bootstrap.min.js"></script>
-<script src="<?php echo APP_RES ?>/js/main-style.js"></script>
-<script src="<?php echo APP_RES ?>/js/scroll-to-top.min.js"></script>
+<script src="<?php echo APP_RES ?>lightbox/js/lightbox.js"></script>
+<script src="<?php echo APP_RES ?>bootstrap/js/bootstrap.min.js"></script>
+<script src="<?php echo APP_RES ?>js/main-style.js"></script>
+<script src="<?php echo APP_RES ?>js/scroll-to-top.min.js"></script>
 <script src="<?php echo APP_RES ?>js/addblock_detector.js"></script>
 <?php //scroll-to-top ?>
 <a href="" id="scroll-to-top">

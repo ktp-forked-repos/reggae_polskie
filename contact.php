@@ -93,11 +93,11 @@
 
 <!-- scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="<?php echo APP_RES ?>/bootstrap/js/bootstrap.min.js"></script>
-<script src="<?php echo APP_RES ?>/js/main-style.js"></script>
-<script src="<?php echo APP_RES ?>/js/scroll-to-top.min.js"></script>
-<script src="<?php echo APP_RES ?>/js/jqBootstrapValidation.js"></script>
-<script src="<?php echo APP_RES ?>/js/contact_me.js"></script>
+<script src="<?php echo APP_RES ?>bootstrap/js/bootstrap.min.js"></script>
+<script src="<?php echo APP_RES ?>js/main-style.js"></script>
+<script src="<?php echo APP_RES ?>js/scroll-to-top.min.js"></script>
+<script src="<?php echo APP_RES ?>js/jqBootstrapValidation.js"></script>
+<script src="<?php echo APP_RES ?>js/contact_me.js"></script>
 <script src="<?php echo APP_RES ?>js/addblock_detector.js"></script>
 
 <!-- scroll-to-top -->

@@ -17,10 +17,10 @@
       <a class="text-white text-center" href="<?php echo SITE_PATH;?>privacy-policy.php"><i class="fa fa-hashtag" aria-hidden="true"></i> Polityka prywatności</a>
    </div>
    <div class="col-sm-4">
-      <a class="developer facebook" href="https://www.facebook.com/official.reggaepolskie" target="_blank">
+      <a class="developer facebook" href="https://www.facebook.com/official.reggaepolskie" rel="publisher" target="_blank">
          <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
       </a>
-      <a class="developer youtube" href="https://www.youtube.com/c/ReggaePolskieRaggamaniek" target="_blank">
+      <a class="developer youtube" href="https://www.youtube.com/c/ReggaePolskieRaggamaniek" rel="publisher" target="_blank">
          <i class="fa fa-youtube-square fa-3x" aria-hidden="true"></i>
       </a>
       <a class="developer google-plus" href="https://plus.google.com/+ReggaePolskieRaggamaniek" rel="publisher" target="_blank">
@@ -33,8 +33,8 @@
 </div>
 <div class="col-xs-12">
    <small>
-      2010 - <?php echo date("Y");?> &#169; Reggae Polskie 
-      <a class="text-white text-center" href="http://www.maciejpowallo.pl/">TtK CMS v. 1.2.2</a> 
+       <span class="col-xs-12">2010 - <?php echo date("Y");?> &#169; Reggae Polskie </span>
+       <span class="col-xs-12"><a class="text-white text-center" href="http://www.maciejpowallo.pl/">TtK CMS v. 1.2.3</a></span>
    </small>
 </div>
-<script src="<?php echo APP_RES?>/js/cookies.min.js"></script>
+<script src="<?php echo APP_RES?>js/cookies.min.js"></script>
