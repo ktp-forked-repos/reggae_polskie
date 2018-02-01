@@ -14,15 +14,15 @@ if($num_rows > 0){
     foreach($stmt as $row)  
     {
         $content = $row['content'];
-        $characters = ["<p>", "</p>", "<br />", "<span>", "</span>", "<br>"];
+        $characters = ["<p>", "</p>", "<span>", "</span>", "<br>", "<br />", "<br >"];
         foreach($characters as $char)
         {
             $content = str_replace($char,"", $content);
         }
         if (strlen($content) > 300) {
             $contentCut = substr($content, 0, 300);
-            $content = substr($contentCut, 0, strrpos($contentCut, ' ')); 
+            $content = substr($contentCut, 0, strrpos($contentCut, ' '));
         }
-        echo '<meta name="Description" content="' . $content . '"/>';
+        echo '<meta name="Description" content="' . $content . '... Czytaj na Reggae Polskie" />';
     };
 }

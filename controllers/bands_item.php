@@ -2,7 +2,11 @@
 $name_test = $name;
 $name = preg_replace("/[^a-zA-Z0-9_-ąćęłńóśźżĄĆĘŁŃÓŚŹŻ \.!]/", '', $name);
 if($name != $name_test){
-      die ('<h4 class="row entry-empty col-xs-12"><i class="fa fa-meh-o" aria-hidden="true"> Hola hola!!!! czy Ty usiłujesz zaatakować moją stronę?? <br> Twoje IP zostało zapisane do bazy danych</h4>');
+      die ('
+            <h3 class="row entry-empty text-center col-xs-12">
+                <i class="fa fa-meh-o" aria-hidden="true"></i> Fatal Error!!!! Wykryto nieprawidłowy adres URL
+                <br><br>
+                <img src="'. APP_RES . 'images/main/fatal_error.jpg' . '" class="center-block img-responsive" alt="Cinque Terre"></h3>');
 }
 else if(isset($name) && $name === $name_test){
 

@@ -10,8 +10,14 @@ $settings = new Settings();
 
     <meta charset=utf-8>
     <meta name=viewport content="width=device-width, initial-scale=1">
-    <meta name="Keywords"
-          content="reggae, regee, ragga, rege, regge, raga, polskie+reggae, reggaepolskie, polskiereggae, roots, dancehall, ska, dub, roots, rockers, polskie, zespoły, wykonawca, wykonawcy, artyści, muzyczne, bandy, bands<?php if (isset($_GET['name'])) echo ', ' . $_GET['name']; ?>">
+    <meta name="Keywords" content="reggae, regee, ragga, rege, regge, raga, polskie+reggae, reggaepolskie, polskiereggae, roots, dancehall, ska, dub, roots, rockers, polskie, zespoły, wykonawca, wykonawcy, artyści, muzyczne, bandy, bands<?php if (($_GET['name'])) echo ', ' . $_GET['name']; ?>">
+    <meta name="Description" content="<?php
+        $name = $_GET['name'];
+        if ($_GET['name']) {
+            include('controllers/bands_description.php');
+        } else {
+            echo 'Polskie zespoły muzyczne grające reggae. Reggae Polskie to wszystko czego potrzebujesz o muzyce reggae, raggamuffin, dancehall, ska czy dub w jednym miejscu. Znajdziesz tutaj swój ulubiny zespół muzyczny lub artystę, którego uwielbiasz. ';
+        }?> ">
     <link rel="stylesheet" type="text/css" href="<?php echo APP_RES ?>bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo APP_RES ?>font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo APP_RES ?>css/main-style.min.css">
@@ -19,13 +25,12 @@ $settings = new Settings();
     <script src="<?php echo APP_RES ?>js/jquery-3.2.1.min.js"></script>
     <?php $CMS->head(); ?>
     <title><?php
-        if (isset($_GET['name'])) {
+        if ($_GET['name']) {
             echo $_GET['name'] . ' - Reggae Polskie';
         } else {
             echo 'Polskie zespoły i artyści muzyki reggae / Polish reggae bands';
         }
-        ?>
-    </title>
+        ?></title>
 </head>
 <body>
 <?php //toolbar ?>

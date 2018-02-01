@@ -18,7 +18,7 @@ $settings = new Settings();
     }
     ?>
     <meta name="Keywords"
-          content="aktualności, newsy, news, nowości, nowinki, reggae, polskie, koncerty, płyty, albumy">
+          content="aktualności, newsy, news, nowości, nowinki, reggae, polskie, koncerty, płyty, albumy<?php if(is_numeric($_GET['id'])){include("controllers/news_keywords.php");}?>">
     <link rel="stylesheet" type="text/css" href="<?php echo APP_RES ?>bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo APP_RES ?>font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo APP_RES ?>css/main-style.min.css">
@@ -26,17 +26,13 @@ $settings = new Settings();
     <script src="<?php echo APP_RES ?>js/jquery-3.2.1.min.js"></script>
     <?php $CMS->head(); ?>
 
-    <title>
-        <?php
+    <title><?php
         if (isset($_GET['id'])) {
             include("controllers/news_title.php");
         } else {
             echo 'Aktualności z polskiej sceny muzyki reggae';
         }
-        ?>
-    </title>
-
-    <title>Aktualności - Reggae Polskie</title>
+        ?></title>
 </head>
 <body>
 <?php //toolbar ?>
