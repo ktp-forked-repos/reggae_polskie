@@ -58,6 +58,7 @@
 <script src="<?php echo APP_RES ?>bootstrap/js/bootstrap.min.js"></script>
 <script src="<?php echo APP_RES ?>js/main-style.js"></script>
 <script src="<?php echo APP_RES ?>js/scroll-to-top.min.js"></script>
+<script src="<?php echo APP_RES?>js/addblock_detector.js"></script>
 <?php //scroll-to-top ?>
 <a href="" id="scroll-to-top">
 		<span class="scroll-top fa-stack fa-2x fixed-up">
